@@ -6,7 +6,27 @@
 - **Notification of Acceptance:** Aug 23, 2016
 - **Conference:** Oct 31 - Nov 3, 2016, San Francisco Bay Area, California, USA
 
-## Possible formats
+## Guidelines
+- we use LaTeX for authoring the paper
+- the template is 2-column ACM format as described here: http://www.acm.org/publications/proceedings-template
+- Figures:
+  - there should be **one person** responsible for all figures (using input from others)
+  - all figures are stored in a single directory: `figures`
+  - from LaTeX-point-pf-view, all figures are either vectors (PDF) or rasters (JPEG at 300 dpi)
+  - both source and generated figures are versioned
+  - open-source authoring tools are preferred (for interop and automating reasons):
+    - inkscape, dia, open/libreoffice, gimp, R, ...
+  - suggested input formats:
+    - photos, screenshots: **PNG** or **JPEG** (90% compression) at **300 dpi**
+    - workflows, activity diagrams or simialr: **ODG, DIA**
+    - deployment, component or similar diagrams: **SVG, ODG, DIA**
+    - box plots, bar charts, scatter plots, correlation plots or similar: **R**
+  - automated conversion possible:
+    - on Linux, you can use [figconv](https://github.com/vsimko/figconv) to automatically convert multiple input vector formats to PDF
+- generated PDF is not versioned
+- github releases (git tags) will be used for making a particular PDF version avaiable for download (e.g. when the paper has been submitted)
+
+## Type of the paper
 
 ### Vision Papers
 Authors are invited to submit vision papers describing visionary
