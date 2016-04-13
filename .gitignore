@@ -1,0 +1,6 @@
+*.aux
+*.bbl
+*.blg
+*.log
+/biggis-paper.pdf
+*.synctex.gz
