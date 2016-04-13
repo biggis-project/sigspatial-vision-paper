@@ -1,11 +1,10 @@
-# sigspatial-vision-paper
-Vision paper for [SIGSPATIAL'16](http://sigspatial2016.sigspatial.org/)
+# BigGIS paper for SIGSPATIAL 2016
+[SIGSPATIAL'16 Conference](http://sigspatial2016.sigspatial.org/)
 
-- Abstract Submission: June 14, 2016 (midnight PT)
-- Full Paper Submission: June 21, 2016 (midnight PT)
-- Notification of Acceptance: August 23, 2016
- 
-Conference: Monday October 31 - Thursday November 3, 2016, **San Francisco Bay Area, California, USA**
+- **Abstract Submission:** Jun 14, 2016 (midnight PT)
+- **Full Paper Submission:** Jun 21, 2016 (midnight PT)
+- **Notification of Acceptance:** Aug 23, 2016
+- **Conference:** Oct 31 - Nov 3, 2016, San Francisco Bay Area, California, USA
 
 ## Possible formats
 
