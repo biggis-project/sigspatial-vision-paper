@@ -22,7 +22,7 @@
     - deployment, component or similar diagrams: **SVG, ODG, DIA**
     - box plots, bar charts, scatter plots, correlation plots or similar: **R**
   - automated conversion possible:
-    - on Linux, you can use [figconv](https://github.com/vsimko/figconv) to automatically convert multiple input vector formats to PDF
+    - on Linux, you can use [figconv](https://github.com/vsimko/figconv) to automatically convert multiple input vector formats to PDF. It is, however, not required.
 - generated PDF is not versioned
 - github releases (git tags) will be used for making a particular PDF version avaiable for download (e.g. when the paper has been submitted)
 
