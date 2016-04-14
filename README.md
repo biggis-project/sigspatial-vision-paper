@@ -8,23 +8,23 @@
 
 ## Guidelines
 General:
-- use the issue tracker when possible
+- use the [issue tracker](https://github.com/biggis-project/sigspatial16-paper/issues) when possible
 - use LaTeX for authoring the paper
 - the template is 2-column ACM format as described here: http://www.acm.org/publications/proceedings-template
-- generated PDF should not be versioned (already listed in `.gitignore`)
-- github releases (git tags) will be used for making a particular PDF version avaiable for download (e.g. when the paper has been submitted)
+- generated PDF should not be versioned (already listed in [`.gitignore`](.gitignore))
+- [github releases (git tags)](https://github.com/biggis-project/sigspatial16-paper/releases) will be used for making a particular PDF version available for download (e.g. when the paper has been submitted)
 
 Figures:
 - there should be **one person** responsible for all figures (using input from others)
-- all figures are stored in a single directory: `figures`
-- from LaTeX-point-pf-view, all figures are either vectors (PDF) or rasters (JPEG at 300 dpi)
-- both source and generated figures are versioned
+- all figures are stored in a single directory: [`figures`](figures)
+- from LaTeX-point-of-view, all figures are either vectors (PDF) or rasters (JPEG at 300 dpi)
+- both source and generated figures are under version control
 - open-source authoring tools are preferred (for interop and automating reasons):
   - inkscape, dia, open/libreoffice, gimp, R, ...
 - suggested input formats:
   - photos, screenshots: **PNG** or **JPEG** (90% compression) at **300 dpi**
-  - workflows, activity diagrams or simialr: **ODG, DIA**
-  - deployment, component or similar diagrams: **SVG, ODG, DIA**
+  - workflows, activity diagrams or simialr: **ODG, DIA. SVG**
+  - deployment-, component- or similar diagrams: **SVG, ODG, DIA**
   - box plots, bar charts, scatter plots, correlation plots or similar: **R**
 - automated conversion possible:
   - on Linux, you can use [figconv](https://github.com/vsimko/figconv) to automatically convert multiple input vector formats to PDF. It is, however, not required.
