@@ -2,6 +2,8 @@
 
 \usepackage{xcolor}
 \usepackage{pifont}
+\usepackage{paralist} % inparaenum support
+
 \newcommand{\quadrat}{\ding{110}}%
 
 
@@ -203,7 +205,37 @@ email: {\texttt{jsmith@konstanz.de}}).}
 
 \section{Introduction}
 \label{sec:intro}
-Geographic information systems (GIS) have long been used for geospatial data analyses and visualizations to support the decision making process in many domains like civil planning, environment and nature protection or emergency management. Thereby geospatial data has always been big data. Petabytes of remotely sensed archival geodata (\textit{volume}) and a rapidly increasing amount of real-time sensor data streams (\textit{velocity}) accelerate the need for big data analytics in order to effectively model and efficiently process complex geo-temporal problems. In the past, limited access to computing power has been a bottleneck \cite{OGC2013}. However, in the era of cloud computing, leveraging cloud-based resources is a widely adopted pattern (hardware level). In addition, with the advent of big data analytics and its ever increasing scope of application, performing massively parallel analytical tasks on large-scale data at rest or data in motion is as well becoming a feasible approach shaping the design of today's GIS (software-level). Although scaling out enables GIS to tackle the aforementioned big data induced requirements there are still two major open issues. Firstly, dealing with varying data types across multiple data sources (\textit{variety}) leading to data and schema heterogenity, e.g. to describe locations, like addresses, relative spatial relationships or different coordinates reference systems \cite{frank2016ibsducsdm}. Secondly, modeling the inherent uncertainties in data (\textit{veracity}), e.g. real-world noise and errorneous values due to the nature of the data collecting process \cite{Xiang2016}. Both being crucial tasks in data management and analytics that directly affect the information retrieval and decision making quality and moreover the generated knowledge on human-side (\textit{value}). Delegating this to only predefined and computed metrics often deprioritizes more important macro aspects of the problem. To the best of our knowledge, current approaches mainly address high volume batch and high velocity stream analytics in their design of a closed unified analytics GIS platform \cite{Thakur2015}. While the importance of such systems to efficiently deal with large amount of data is obvious, computers miss the creativity of human analysis to create hidden connections between data and problem domain \cite{SSS+14a}.
+Geographic information systems (GIS) have long been used for geospatial data
+analyses and visualizations to support the decision making process in many
+domains like civil planning, environment and nature protection or emergency
+management. Thereby geospatial data has always been big data. Petabytes of
+remotely sensed archival geodata (\textit{volume}) and a rapidly increasing
+amount of real-time sensor data streams (\textit{velocity}) accelerate the need
+for big data analytics in order to effectively model and efficiently process
+complex geo-temporal problems. In the past, limited access to computing power
+has been a bottleneck \cite{OGC2013}. However, in the era of cloud computing,
+leveraging cloud-based resources is a widely adopted pattern (hardware level).
+In addition, with the advent of big data analytics and its ever increasing scope
+of application, performing massively parallel analytical tasks on large-scale
+data at rest or data in motion is as well becoming a feasible approach shaping
+the design of today's GIS (software-level). Although scaling out enables GIS to
+tackle the aforementioned big data induced requirements, there are still two
+major open issues. Firstly, dealing with varying data types across multiple data
+sources (\textit{variety}) leading to data and schema heterogenity, e.g. to
+describe locations, like addresses, relative spatial relationships or different
+coordinates reference systems \cite{frank2016ibsducsdm}. Secondly, modeling the
+inherent uncertainties in data (\textit{veracity}), e.g. real-world noise and
+errorneous values due to the nature of the data collecting process
+\cite{Xiang2016}. Both being crucial tasks in data management and analytics that
+directly affect the information retrieval and decision making quality and
+moreover the generated knowledge on human-side (\textit{value}). Delegating this
+to only predefined and computed metrics often deprioritizes more important macro
+aspects of the problem. To the best of our knowledge, current approaches mainly
+address high volume batch and high velocity stream analytics in their design of
+a closed unified analytical GIS platform \cite{Thakur2015}. While the importance
+of such systems to efficiently deal with large amount of data is obvious,
+computers miss the creativity of human analysis to create hidden connections
+between data and problem domain \cite{SSS+14a}.
 
 %% Cognitive biases, Decision fatique???
 %\begin{itemize}
@@ -211,8 +243,30 @@ Geographic information systems (GIS) have long been used for geospatial data ana
 %	\item decision fatigue refers to the deteriorating quality of decisions made by an individual, after a long session of decision making \url{https://en.wikipedia.org/wiki/Decision_fatigue}
 %\end{itemize}
 
-In this paper, we present the vision of \textit{BigGIS}, a new generation \textcolor{red}{uncertainty-aware??} predictive and prescriptive GIS, that leverages big data analytics, semantics reasoning and visual analytics methodologies. Our approach symbiotically combines machine-side computation, data storage and semantics reasoning capabilities with human-side perceptive skills, cognitive reasoning and domain knowledge. Considering uncertainty to be reciprocally related to generating new insights and consequently to knowledge, we introduce a novel \textit{Continuous Refinement Model} in Section \ref{sec:crm} to gradually minimize the real-world noise and dissolve heterogenity in data and metadata such that the information gain can be maximized. Based on the well-established Knowledge Generation Model for Visual Analytics introduced in \cite{SSS+14a} this will on one hand allow to steadily improve the analysis results by updating  deployed machine learning models, on the other hand to build the user's trust in these results by creating awareness of underlying uncertainties and data provenance which is key for providing meaningful predictive and prescriptive decision support in various fields \cite{SSK+16a}. Our contribution lies in (1) an \textit{integrated analytical pipeline approach} which includes (2) \textit{semantic reasoning} as well as (3) \textit{human-related knowledge extraction and generation} to process high volume, high velocity and high dimensional spatio-temporal data from unreliable and heterogeneous sources.
-
+In this paper, we present the vision of \textit{BigGIS}, a new generation
+\textcolor{red}{uncertainty-aware??} predictive and prescriptive GIS, that
+leverages big data analytics, semantics reasoning and visual analytics
+methodologies. Our approach symbiotically combines machine-side computation,
+data storage and semantics reasoning capabilities with human-side perceptive
+skills, cognitive reasoning and domain knowledge. Considering uncertainty to be
+reciprocally related to generating new insights and consequently to knowledge,
+we introduce a novel \textit{Continuous Refinement Model} in Section
+\ref{sec:crm} to gradually minimize the real-world noise and dissolve
+heterogenity in data and metadata such that the information gain can be
+maximized. Based on the well-established Knowledge Generation Model for Visual
+Analytics introduced in \cite{SSS+14a} this will on one hand allow to steadily
+improve the analysis results by updating deployed machine learning models, on
+the other hand to build the user's trust in these results by creating awareness
+of underlying uncertainties and data provenance which is key for providing
+meaningful predictive and prescriptive decision support in various fields
+\cite{SSK+16a}. Our contribution lies in
+\begin{inparaenum}[(1)]
+  \item an \textit{integrated analytical pipeline approach} which includes
+  \item \textit{semantic reasoning} as well as
+  \item \textit{human-related knowledge extraction and generation} to process
+  high volume, high velocity and high dimensional spatio-temporal data from
+  unreliable and heterogeneous sources.
+\end{inparaenum}
 
 \section{Related Work and Influences}
 \label{sec:related}
