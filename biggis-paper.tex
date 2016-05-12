@@ -6,6 +6,8 @@
 
 
 \begin{document}
+% No indent of paragraph
+\parindent 0pt
 
 % Copyright
 \setcopyright{acmcopyright}
@@ -18,7 +20,7 @@
 
 
 % DOI
-%\doi{10.475/123_4}
+\doi{10.475/123_4}
 
 % ISBN
 %\isbn{123-4567-24-567/08/06}
@@ -34,15 +36,16 @@
 %\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
-
-\title{BigGIS: A Predictive and Prescriptive Geographic Information System based on High-Dimensional Geo-Temporal Data Structures ("Vision Paper")\titlenote{(Produces the permission block, and
-copyright information). For use with
-SIG-ALTERNATE.CLS. Supported by ACM.}}
-\subtitle{[Extended Abstract]
-\titlenote{A full version of this paper is available as
-\textit{Author's Guide to Preparing ACM SIG Proceedings Using
-\LaTeX$2_\epsilon$\ and BibTeX} at
-\texttt{www.acm.org/eaddress.htm}}}
+%\title{BigGIS: A new generation predictive and prescriptive Geographic Information System}
+\title{BigGIS: A Predictive and Prescriptive Geographic Information System based on High-Dimensional Geo-Temporal Data Structures ("Vision Paper")}
+%\titlenote{(Produces the permission block, and
+%copyright information). For use with
+%SIG-ALTERNATE.CLS. Supported by ACM.}}
+%\subtitle{[Extended Abstract]
+%\titlenote{A full version of this paper is available as
+%\textit{Author's Guide to Preparing ACM SIG Proceedings Using
+%\LaTeX$2_\epsilon$\ and BibTeX} at
+%\texttt{www.acm.org/eaddress.htm}}}
 %
 % You need the command \numberofauthors to handle the 'placement
 % and alignment' of the authors beneath the title.
@@ -68,7 +71,7 @@ SIG-ALTERNATE.CLS. Supported by ACM.}}
 % without further effort on your part as the last section in
 % the body of your article BEFORE References or any Appendices.
 
-\numberofauthors{3} %  in this sample file, there are a *total*
+\numberofauthors{8} %  in this sample file, there are a *total*
 % of EIGHT authors. SIX appear on the 'first-page' (for formatting
 % reasons) and the remaining two appear in the \additionalauthors section.
 %
@@ -85,55 +88,57 @@ SIG-ALTERNATE.CLS. Supported by ACM.}}
 %
 % 1st. author
 \alignauthor
-Firstname Lastname\titlenote{Lorem Ipsum}\\
+Firstname Lastname\titlenote{Maybe put address, e-mail here if allowed}\\
        \affaddr{University of Applied Sciences Karlsruhe}\\
        \affaddr{Moltkestr. 30}\\
        \affaddr{Karlsruhe, Germany}\\
        \email{vorname.nachname@hs-karlsruhe.de}
 % 2nd. author
 \alignauthor
-Firstname Lastname\titlenote{Lorem Ipsum}\\
+Firstname Lastname\titlenote{Maybe put address, e-mail here if allowed}\\
        \affaddr{University of Applied Sciences Karlsruhe}\\
        \affaddr{Moltkestrasse 30}\\
        \affaddr{Karlsruhe, Germany}\\
        \email{vorname.nachname@hs-karlsruhe.de}
 % 3rd. author
 \alignauthor
-Firstname Lastname\titlenote{Lorem Ipsum}\\
-       \affaddr{FZI Research Center for Information Technology}\\
-       \affaddr{Haid-und-Neu-Str. 10-14}\\
-       \affaddr{Karlsruhe, Germany}\\
-       \email{nachname@fzi.de}
-\and  % use '\and' if you need 'another row' of author names
-% 4th. author
-\alignauthor
-Firstname Lastname\titlenote{Lorem Ipsum}\\
-       \affaddr{FZI Research Center for Information Technology}\\
-       \affaddr{Haid-und-Neu-Str. 10-14}\\
-       \affaddr{Karlsruhe, Germany}\\
-       \email{nachname@fzi.de}
-%% 5th. author
-\alignauthor
-Firstname Lastname\titlenote{Lorem Ipsum}\\
+Firstname Lastname\titlenote{Maybe put address, e-mail here if allowed}\\
        \affaddr{Data Analysis and Visualization Group}\\
        \affaddr{University of Konstanz}\\
        \affaddr{Konstanz, Germany}\\
        \email{vorname.nachname@uni-konstanz.de}
-%% 6th. author
-\alignauthor
-Firstname Lastname\titlenote{Lorem Ipsum}\\
-       \affaddr{Data Analysis and Visualization Group}\\
-       \affaddr{University of Konstanz}\\
-       \affaddr{Karlsruhe, Germany}\\
-       \email{firstname.lastname@uni-konstanz.de}
+%\and  % use '\and' if you need 'another row' of author names
+%% 4th. author
+%\alignauthor
+%Firstname Lastname\titlenote{Lorem Ipsum}\\
+%       \affaddr{FZI Research Center for Information Technology}\\
+%       \affaddr{Haid-und-Neu-Str. 10-14}\\
+%       \affaddr{Karlsruhe, Germany}\\
+%       \email{nachname@fzi.de}
+%%% 5th. author
+%\alignauthor
+%Firstname Lastname\titlenote{Lorem Ipsum}\\
+%       \affaddr{Data Analysis and Visualization Group}\\
+%       \affaddr{University of Konstanz}\\
+%       \affaddr{Konstanz, Germany}\\
+%       \email{vorname.nachname@uni-konstanz.de}
+%%% 6th. author
+%\alignauthor
+%Firstname Lastname\titlenote{Lorem Ipsum}\\
+%       \affaddr{Data Analysis and Visualization Group}\\
+%       \affaddr{University of Konstanz}\\
+%       \affaddr{Karlsruhe, Germany}\\
+%       \email{firstname.lastname@uni-konstanz.de}
 }
 % There's nothing stopping you putting the seventh, eighth, etc.
 % author on the opening page (as the 'third row') but we ask,
 % for aesthetic reasons that you place these 'additional authors'
 % in the \additional authors block, viz.
-%\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
-%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
-%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
+\additionalauthors{\textcolor{red}{ToDO@all} John Smith (FZI,
+email: {\texttt{jsmith@fzi.de}}), John Smith (FZI,
+email: {\texttt{jsmith@fzi.de}}), John Smith (Konstanz,
+email: {\texttt{jsmith@konstanz.de}}), John Smith (Konstanz,
+email: {\texttt{jsmith@konstanz.de}}).}
 %\date{30 July 1999}
 % Just remember to make sure that the TOTAL number of authors
 % is the number that will appear on the first page PLUS the
@@ -141,7 +146,8 @@ Firstname Lastname\titlenote{Lorem Ipsum}\\
 
 \maketitle
 \begin{abstract}
-%Geospatial data has always been Big Data. However today's geographic information systems reach their limits due to rapidly growing geo-related data volumes. Especially in real-time processing, these systems do not provide a sufficient design. New technologies and architectures are emerging from the context of Big Data and gain increasing importance.
+\textcolor{red}{ToDO@Patrick} 
+%(Geospatial data has always been Big Data. However today's geographic information systems reach their limits due to rapidly growing geo-related data volumes. Especially in real-time processing, these systems do not provide a sufficient design. New technologies and architectures are emerging from the context of Big Data and gain increasing importance. However, dealing with a variety of different data and uncertainty still remains a crucial task.)
 \end{abstract}
 
 
@@ -193,49 +199,39 @@ Firstname Lastname\titlenote{Lorem Ipsum}\\
 % We no longer use \terms command
 %\terms{Theory}
 
-\keywords{keyword1; keyword2; keyword3}
+\keywords{big data architecture; visual analytics; semantics; knowledge generation}
 
 \section{Introduction}
-\begin{itemize}
-	\item Central role of GIS (long been used for geospatial data analyses and visualization to support decision making process)
-	\item Increasing availability of various existing and new data sources (e.g. remote sensing, participatory sensing, social media, etc.) lead to a rapidly growing amount of data (volume) at varying speed (velocity) and heterogeneous structure (variety)
-	\item Big data related characteristics/dimensions (V's)
-	\item Evolution of GIS are (tightly) coupled with the arise of new technological and analytical approaches in computer sciences \cite{Peng2014}
-	\item In the era of Big Data, arising paradigms, technologies and holistic architectural designs are gradually extending their scope enabling GIS to deal with Big Data induced requirements.
-	\item Data is concrete but is often systematically biased, Reasoning about data (semantics and human-interaction), data-informed vs. data-driven?? delegating your decision-making to only what you can measure right now often de-prioritizes more important macro aspects of the problem %\url{http://andrewchen.co/know-the-difference-between-data-informed-and-versus-data-driven/}
-	\item Current approaches: either exclusively archival and historical data or try to integrate real-time data source to operate on geospatial data streams (see PlanetSense) both unidirectional processing pipelines or workflows that do not leverage human experts domain knowledge and semantics to support the analytical process 
-	\item \textcolor{red}{Knowledge generation is one important research area where Visual Analytics is of great use~\cite{keim2010mastering}, especially when considering uncertainty of heterogeneous data from various data sources (TODO cite paper from Hansi Senaratne from the group of Prof. Keim, either here or related work chapter). The adequate support of diverse users is another field of research where Visual Analytics methods are beneficial.}
-	\item \textcolor{red}{Analyses are often performed in a descriptive, predictive or prescriptive way. While the descriptive analysis visualizes the status quo, predictive and prescriptive analysis focuses on future-oriented planning. 	As a result the underlying model and the visualization have to be tightly coupled in order for users to gain knowledge. Users have the possibility to interactively alter a model's parameters according to their knowledge, consequently the visualization adjusts to the model in a feedback-loop.}
-	\item The novelity \textcolor{red}{(Our contribution)} lies in (1) an \textit{integrated analytical approach} which includes (2) \textit{human-related knowledge extraction} and (3) \textit{semantic reasoning} to process large and heterogeneous spatio-temporal data at rest and in motion, that are unstructured and from unreliable sources
-	\item bridging the usability gap (source:??) between domain experts, end users and technology experts
-	\item System provides predictive, prescriptive and visual tools
-	\item \textcolor{red}{In the end of the introduction chapter, we should clearly formulate how we contribute to the community. This strengthens our paper and shows the reviewer our potential. Maybe this can already be done by the point above.}
-\end{itemize}
+\label{sec:intro}
+Geographic information systems (GIS) have long been used for geospatial data analyses and visualizations to support the decision making process in many domains like civil planning, environment and nature protection or emergency management. Thereby geospatial data has always been big data. Petabytes of remotely sensed archival geodata (\textit{volume}) and a rapidly increasing amount of real-time sensor data streams (\textit{velocity}) accelerate the need for big data analytics in order to effectively model and efficiently process complex geo-temporal problems. In the past, limited access to computing power has been a bottleneck \cite{OGC2013}. However, in the era of cloud computing, leveraging cloud-based resources is a widely adopted pattern (hardware level). In addition, with the advent of big data analytics and its ever increasing scope of application, performing massively parallel analytical tasks on large-scale data at rest or data in motion is as well becoming a feasible approach shaping the design of today's GIS (software-level). Although scaling out enables GIS to tackle the aforementioned big data induced requirements there are still two major open issues. Firstly, dealing with varying data types across multiple data sources (\textit{variety}) leading to data and schema heterogenity, e.g. to describe locations, like addresses, relative spatial relationships or different coordinates reference systems \cite{frank2016ibsducsdm}. Secondly, modeling the inherent uncertainties in data (\textit{veracity}), e.g. real-world noise and errorneous values due to the nature of the data collecting process \cite{Xiang2016}. Both being crucial tasks in data management and analytics that directly affect the information retrieval and decision making quality and moreover the generated knowledge on human-side (\textit{value}). Delegating this to only predefined and computed metrics often deprioritizes more important macro aspects of the problem. To the best of our knowledge, current approaches mainly address high volume batch and high velocity stream analytics in their design of a closed unified analytics GIS platform \cite{Thakur2015}. While the importance of such systems to efficiently deal with large amount of data is obvious, computers miss the creativity of human analysis to create hidden connections between data and problem domain \cite{SSS+14a}.
 
+%% Cognitive biases, Decision fatique???
+%\begin{itemize}
+%	\item cognitive biases are tendencies to think in certain ways that can lead to systematic deviations from a standard of rationality or good judgment \url{https://en.wikipedia.org/wiki/List_of_cognitive_biases}
+%	\item decision fatigue refers to the deteriorating quality of decisions made by an individual, after a long session of decision making \url{https://en.wikipedia.org/wiki/Decision_fatigue}
+%\end{itemize}
 
+In this paper, we present the vision of \textit{BigGIS}, a new generation \textcolor{red}{uncertainty-aware??} predictive and prescriptive GIS, that leverages big data analytics, semantics reasoning and visual analytics methodologies. Our approach symbiotically combines machine-side computation, data storage and semantics reasoning capabilities with human-side perceptive skills, cognitive reasoning and domain knowledge. Considering uncertainty to be reciprocally related to generating new insights and consequently to knowledge, we introduce a novel \textit{Continuous Refinement Model} in Section \ref{sec:crm} to gradually minimize the real-world noise and dissolve heterogenity in data and metadata such that the information gain can be maximized. Based on the well-established Knowledge Generation Model for Visual Analytics introduced in \cite{SSS+14a} this will on one hand allow to steadily improve the analysis results by updating  deployed machine learning models, on the other hand to build the user's trust in these results by creating awareness of underlying uncertainties and data provenance which is key for providing meaningful predictive and prescriptive decision support in various fields \cite{SSK+16a}. Our contribution lies in (1) an \textit{integrated analytical pipeline approach} which includes (2) \textit{semantic reasoning} as well as (3) \textit{human-related knowledge extraction and generation} to process high volume, high velocity and high dimensional spatio-temporal data from unreliable and heterogeneous sources.
 
 
 \section{Related Work and Influences}
+\label{sec:related}
 
 \begin{itemize}
-	\item Big Data architectures: Lambda architecture \cite{Marz2014}, Kappa architecture \cite{Kreps2014}
-	\item Analytics (Processing Magic):
-	\item Semantics: Congintive Apps, Linked APIs
-	\item Visual Analytics: Knowledge generation Model for Visual Analytics \cite{SSS+14a}
-	\item \textcolor{red}{Is there a limitation with respect to the number of references we should mention here?}
+	\item \textcolor{red}{ToDO@all} (Demarcation of \cite{Peng2014}: Used BigGIS, but not for a certain type of computation platform, more as a general overview of how big data technologies can help answer GIS related questions. Check doi in .bib-file for paper link)
+	\item \textcolor{red}{ToDO@Patrick} Current approaches: PlanetSense \cite{Thakur2015},
+	\item \textcolor{red}{ToDO@all} (Geospatial intelligence, should we mention this area of research, also see PlanetSense \cite{Thakur2015})
+	\item \textcolor{red}{ToDO@Patrick} (Big Data architectures: Lambda architecture \cite{Marz2014}, Kappa architecture \cite{Kreps2014})
+	\item \textcolor{red}{ToDO@Julian} (Analytics aka Magic)
+	\item \textcolor{red}{ToDO@Matthias} (Semantics: Congintive Apps, Linked APIs)
+	\item \textcolor{red}{ToDO@Manuel@Daniel} (Visual Analytics: Knowledge generation Model for Visual Analytics \cite{SSS+14a}, Analyses are often performed in a descriptive, predictive or prescriptive way. While the descriptive analysis visualizes the status quo, predictive and prescriptive analysis focuses on future-oriented planning. As a result the underlying model and the visualization have to be tightly coupled in order for users to gain knowledge. Users have the possibility to interactively alter a model's parameters according to their knowledge, consequently the visualization adjusts to the model in a feedback-loop. Knowledge generation is one important research area where Visual Analytics is of great use~\cite{keim2010mastering}, especially when considering uncertainty of heterogeneous data from various data sources \cite{SSK+16a} The adequate support of diverse users is another field of research where Visual Analytics methods are beneficial.)   
 \end{itemize}
 
 \section{BigGIS Platform}
+\label{sec:biggis}
 
-\subsection{Motivation}
-
-\begin{itemize}
-	\item cognitive biases are tendencies to think in certain ways that can lead to systematic deviations from a standard of rationality or good judgment \url{https://en.wikipedia.org/wiki/List_of_cognitive_biases}
-	\item decision fatigue refers to the deteriorating quality of decisions made by an individual, after a long session of decision making \url{https://en.wikipedia.org/wiki/Decision_fatigue}
-	\item \textcolor{red}{We would recommend not to have a motivation subsection here. If there is a need for a motivation of some of the aspects introduced in this chapter, it should be placed in the Introduction of Chapter 1}
-\end{itemize}
-
-\subsection{Continuous Refinement Model for BigGIS}
+\subsection{Continuous Refinement Model in BigGIS}
+\label{sec:crm}
 
 \begin{figure*}
 \centering
@@ -245,57 +241,42 @@ Firstname Lastname\titlenote{Lorem Ipsum}\\
 \end{figure*}
 
 \begin{itemize}
-	\item defining the Continuous Refinement Process (CRP), with so called R-Gates (Refinement Gates: dedicated access points, entry points)
-	\item High-Level description of end-to-end workflow
-	\item What is the usability gap?
-	\item bridging the usability gap (source:??) between domain experts, end users and technology experts
-	\item \textcolor{red}{Clearly show (also with examples) how the CRP works with respect to Visual Analytics. }
+	\item \textcolor{red}{ToDO@Patrick} (1st draft: Describing general aspects of the CRM in BigGIS. Subsubsections should match the contribution/content mentioned in the Introduction's last paragraph).
+	\item \textcolor{red}{ToDO@Patrick} (1st draft: High-Level description of end-to-end workflow)
 \end{itemize}
 
-%\subsubsection{Semantics-Level}
-%
-%\begin{itemize}
-%	\item direct semantic support
-%	\item indirect semantic support
-%\end{itemize}
-%
-%\subsubsection{Domain-Level}
-%\begin{itemize}
-%	\item direct domain knowledge support
-%	\item indirect domain knowledge support
-%\end{itemize}
-%
-%\subsubsection{Technology-Level}
-%\begin{itemize}
-%	\item direct technology knowledge support
-%	\item indirect technology knowledge support
-%\end{itemize}
+\subsubsection{Data}
 
-\subsection{Architecture}
+\subsubsection{Semantics Reasoning}
+
+\subsubsection{Knowledge Extraction and Generation}
+
+\subsubsection{Integrated Analytical Pipeline}
+
+\subsubsection{Dealing with Uncertainty}
+
+
+
+\subsection{Challenges}
+\label{sec:chls}
 
 \begin{itemize}
-	\item \textcolor{red}{If we talk about the architecture of a system designed according to our proposed approach, it should be on an abstract higher level. Maybe also another subsection title could be a good idea.}
+	\item \textcolor{red}{ToDO@all}: What challenges do we expect to have? According to the structure of the paper we should use the \texttt{\textbackslash subsubsection} from Section \ref{sec:crm} as orientation
+	\item Handling big data related requirements: volume, velocity, variety and veracity
+	\item challenge 3
 \end{itemize}
 
-\section{Scenarios}
+\section{Use Cases}
+\textcolor{red}{ToDO@all} BigGIS will support decision making in multiple use cases which require processing of large and heterogeneous data sets. The prototype will be evaluated on three scenarios: (1) smart city and health, i.e. predicting urban heat islands, (2) environmental management, i.e. prediciting spread of invasive pests, (3) emergency management, i.e. predicting dispersion of toxic gases.
 
-\begin{itemize}
-	\item \textcolor{red}{chapter really needed? Maybe call it "Use Cases" and say that these use cases can only be solved because WE defined this BigGIS-pipeline which is now of great help for this and that analytical task. Again, abstraction is the key here.}
-	\item \textcolor{red}{This could also be a good idea when we can not show an evaluation of our proposed idea.}
-\end{itemize}
 
-\section{Conclusions and Future Work}
-
-\begin{itemize}
-	\item \textcolor{red}{Maybe call it "Discussion \& Conclusion". In the discussion part we discuss the advantages and disadvantages of our approach. In the conclusion we again shortly summarize in our own words what we just presented and give insight about future work.}
-\end{itemize}
-
+\section{Discussion and Future Work}
+\textcolor{red}{ToDO@all} (In the discussion part we discuss the advantages and disadvantages of our approach. In the conclusion we again shortly summarize in our own words what we just presented and give insight about future work.)
 %\end{document}  % This is where a 'short' article might terminate
 
 %ACKNOWLEDGMENTS are optional
 \section{Acknowledgements}
-
-
+\textcolor{red}{ToDO@all} What to place here?
 %
 % The following two commands are all you need in the
 % initial runs of your .tex file to
