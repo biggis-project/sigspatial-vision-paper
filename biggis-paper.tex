@@ -223,7 +223,7 @@ tackle the aforementioned big data induced requirements, there are still two
 major open issues. Firstly, dealing with varying data types across multiple data
 sources (\textit{variety}) leading to data and schema heterogenity, e.g. to
 describe locations, like addresses, relative spatial relationships or different
-coordinates reference systems \cite{frank2016ibsducsdm}. Secondly, modeling the
+coordinates reference systems \cite{Frank.2016a}. Secondly, modeling the
 inherent uncertainties in data (\textit{veracity}), e.g. real-world noise and
 errorneous values due to the nature of the data collecting process
 \cite{Xiang2016}. Both being crucial tasks in data management and analytics that
@@ -278,6 +278,8 @@ meaningful predictive and prescriptive decision support in various fields
 	\item \textcolor{red}{ToDO@Patrick} (Big Data architectures: Lambda architecture \cite{Marz2014}, Kappa architecture \cite{Kreps2014})
 	\item \textcolor{red}{ToDO@Julian} (Analytics aka Magic)
 	\item \textcolor{red}{ToDO@Matthias} (Semantics: Congintive Apps, Linked APIs)
+	Preconditions for meaningful findings in geographical information systems are accurate, consistent and complete data as input for analytical processes. However, sources of spacial data are distributed and quality of the data is varying, especially when considering uncertain data like volunteered geographic information and participatory sensing data. We address this challenge by a smart data integration approach~\cite{Frank.2016a} which is based on semantically described data sources and data transformation services. Smart web services dynamically compose workflows of data sources and data transformation services adopted to the requirements of different
+geographical information systems based on the semantic meta data~\cite{Frank.2016b}.
 	\item \textcolor{red}{ToDO@Manuel@Daniel} (Visual Analytics: Knowledge generation Model for Visual Analytics \cite{SSS+14a}, Analyses are often performed in a descriptive, predictive or prescriptive way. While the descriptive analysis visualizes the status quo, predictive and prescriptive analysis focuses on future-oriented planning. As a result the underlying model and the visualization have to be tightly coupled in order for users to gain knowledge. Users have the possibility to interactively alter a model's parameters according to their knowledge, consequently the visualization adjusts to the model in a feedback-loop. Knowledge generation is one important research area where Visual Analytics is of great use~\cite{keim2010mastering}, especially when considering uncertainty of heterogeneous data from various data sources \cite{SSK+16a} The adequate support of diverse users is another field of research where Visual Analytics methods are beneficial.)   
 \end{itemize}
 
@@ -301,15 +303,15 @@ meaningful predictive and prescriptive decision support in various fields
 
 \subsubsection{Data}
 
-\subsubsection{Semantics Reasoning}
+\subsubsection{Semantic Reasoning}
+Locating all available data sources that are relevant for meaningful findings in analytical processes is hard to do when it has to be done manually. Semantic Web technology helps to describe data sources semantically using	widely-used vocabularies. Furthermore, semantic reasoning enables machines to discover suitable sources even if they are described differently, provided that an appropriate ontology supports the system.
 
 \subsubsection{Knowledge Extraction and Generation}
 
 \subsubsection{Integrated Analytical Pipeline}
 
 \subsubsection{Dealing with Uncertainty}
-
-
+When considering uncertain data like volunteered geographic information and participatory sensing data in geographical information systems, we also have to deal with uncertainty. To address this challenge, we apply semantic reasoning on the provenance information of data sources in order to infer a level of uncertainty that can be considered in the analytical processes.
 
 \subsection{Challenges}
 \label{sec:chls}
