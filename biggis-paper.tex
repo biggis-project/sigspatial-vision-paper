@@ -98,10 +98,10 @@ Firstname Lastname\titlenote{Maybe put address, e-mail here if allowed}\\
 % 2nd. author
 \alignauthor
 Firstname Lastname\titlenote{Maybe put address, e-mail here if allowed}\\
-       \affaddr{University of Applied Sciences Karlsruhe}\\
-       \affaddr{Moltkestrasse 30}\\
+       \affaddr{FZI Research Center for Information Technology}\\
+       \affaddr{Haid-und-Neu-Str. 10-14}\\
        \affaddr{Karlsruhe, Germany}\\
-       \email{vorname.nachname@hs-karlsruhe.de}
+       \email{nachname@fzi.de}
 % 3rd. author
 \alignauthor
 Firstname Lastname\titlenote{Maybe put address, e-mail here if allowed}\\
@@ -243,18 +243,18 @@ between data and problem domain \cite{SSS+14a}.
 %	\item decision fatigue refers to the deteriorating quality of decisions made by an individual, after a long session of decision making \url{https://en.wikipedia.org/wiki/Decision_fatigue}
 %\end{itemize}
 
-In this paper, we present the vision of \textit{BigGIS}, a new generation
-\textcolor{red}{uncertainty-aware??} predictive and prescriptive GIS, that
-leverages big data analytics, semantics reasoning and visual analytics
-methodologies. Our approach symbiotically combines machine-side computation,
-data storage and semantics reasoning capabilities with human-side perceptive
+In this paper, we present the vision of \textit{BigGIS}, a new generation 
+predictive and prescriptive GIS, that
+leverages big data analytics, semantic reasoning and visual analytics
+methodologies. Our approach symbiotically combines system-side computation,
+data storage and semantic reasoning capabilities with human-side perceptive
 skills, cognitive reasoning and domain knowledge. Considering uncertainty to be
 reciprocally related to generating new insights and consequently to knowledge,
-we introduce a novel \textit{Continuous Refinement Model} in Section
+we introduce a novel \textit{continuous refinement model} in Section
 \ref{sec:crm} to gradually minimize the real-world noise and dissolve
 heterogenity in data and metadata such that the information gain can be
-maximized. Based on the well-established Knowledge Generation Model for Visual
-Analytics introduced in \cite{SSS+14a} this will on one hand allow to steadily
+maximized. Based on the well-established knowledge generation model for visual
+analytics introduced in \cite{SSS+14a} this will on one hand allow to steadily
 improve the analysis results by updating deployed machine learning models, on
 the other hand to build the user's trust in these results by creating awareness
 of underlying uncertainties and data provenance which is key for providing
@@ -268,31 +268,34 @@ meaningful predictive and prescriptive decision support in various fields
   unreliable and heterogeneous sources.
 \end{inparaenum}
 
-\section{Related Work and Influences}
+\section{Related Work}
 \label{sec:related}
 
+We group related work into geo-spatial big data-analytics platforms and uncertainty handling. The former covers works on big data enabled GIS platforms and discusses their conceptual designs. The latter gives an overview of fields of research with respect to uncertainty handling and knowledge generation.
+
+\subsection{Geo-Spatial Big Data-Analytics Platforms}
 \begin{itemize}
+	\item \textcolor{red}{ToDO@Patrick, maybe better to leave out completely or put into Section \ref{sec:chls}} Challenges related to the nature of big data, i.e. large, fast and diverse, lead to the evolution of new big data management and analytics architectures. An interesting architecture proposal is the lambda architecture \cite{Marz2013}. By decomposing the problem into three layers, namely the batch layer, the speed layer, and the serving layer this architecture hybridly combines historically known batch analytics and newly arising stream analytics to overcome eachs single weakenesses. While this design allows for adhoc analysis ability during batch runs the processing logic has to be implemented twice, in the batch and speed layer, which increases the overall complexity. A more recent approach known as the kappa architecture \cite{Kreps2014} tries to decrease the introduced complexity on analytics level by exclusively using speed and serving layer. 
 	\item \textcolor{red}{ToDO@all} (Demarcation of \cite{Peng2014}: Used BigGIS, 
 	but not for a certain type of computation platform, more as a general 
 	overview of how big data technologies can help answer GIS related questions. 
 	Check doi in .bib-file for paper link)
-	\item \textcolor{red}{ToDO@Patrick} Current approaches: PlanetSense 
-	\cite{Thakur2015},
-	\item \textcolor{red}{ToDO@all} (Geospatial intelligence, should we mention 
-	this area of research, also see PlanetSense \cite{Thakur2015})
-  
-  \item Plasmap\footnote{\url{https://plasmap.io/}} is a high-performance 
+	\item \textcolor{red}{ToDO@Patrick} Current approaches: PlanetSense \cite{Thakur2015}
+	\item Plasmap\footnote{\url{https://plasmap.io/}} is a high-performance 
   geo-processing platform that provides a lightweight query language for 
   high-performance location discovery based on OpenStreetMap. Plasmap differs 
   from BigGIS ... TODO.
-  
-	\item \textcolor{red}{ToDO@Patrick} (Big Data architectures: Lambda architecture \cite{Marz2014}, Kappa architecture \cite{Kreps2014})
-	\item \textcolor{red}{ToDO@Julian} (Analytics aka Magic)
-	\item \textcolor{red}{ToDO@Matthias} (Semantics: Congintive Apps, Linked APIs)
-	Preconditions for meaningful findings in geographical information systems are accurate, consistent and complete data as input for analytical processes. However, sources of spacial data are distributed and quality of the data is varying, especially when considering uncertain data like volunteered geographic information and participatory sensing data. We address this challenge by a smart data integration approach~\cite{Frank.2016a} which is based on semantically described data sources and data transformation services. Smart web services dynamically compose workflows of data sources and data transformation services adopted to the requirements of different
-geographical information systems based on the semantic meta data~\cite{Frank.2016b}.
-	\item \textcolor{red}{ToDO@Manuel@Daniel} (Visual Analytics: Knowledge generation Model for Visual Analytics \cite{SSS+14a}, Analyses are often performed in a descriptive, predictive or prescriptive way. While the descriptive analysis visualizes the status quo, predictive and prescriptive analysis focuses on future-oriented planning. As a result the underlying model and the visualization have to be tightly coupled in order for users to gain knowledge. Users have the possibility to interactively alter a model's parameters according to their knowledge, consequently the visualization adjusts to the model in a feedback-loop. Knowledge generation is one important research area where Visual Analytics is of great use~\cite{keim2010mastering}, especially when considering uncertainty of heterogeneous data from various data sources \cite{SSK+16a} The adequate support of diverse users is another field of research where Visual Analytics methods are beneficial.)   
 \end{itemize}
+
+\subsection{Uncertainty Handling}
+
+\begin{itemize}
+	\item \textcolor{red}{ToDO@Julian} (Analytics aka Magic)
+	\item \textcolor{red}{ToDO@Matthias} (Semantics: Cognintive Apps, Linked APIs)
+	Preconditions for meaningful findings in geographic information systems are accurate, consistent and complete data as input for analytical processes. However, sources of spatial data are distributed and quality of the data is varying, especially when considering uncertain data like volunteered geographic information and participatory sensing data. We address this challenge by a smart data integration approach~\cite{Frank.2016a} which is based on semantically described data sources and data transformation services. Smart web services dynamically compose workflows of data sources and data transformation services adopted to the requirements of different geographic information systems based on the semantic meta data~\cite{Frank.2016b}.
+	\item \textcolor{red}{ToDO@Manuel@Daniel} (Visual Analytics: Knowledge generation Model for Visual Analytics \cite{SSS+14a}, Analyses are often performed in a descriptive, predictive or prescriptive way. While the descriptive analysis visualizes the status quo, predictive and prescriptive analysis focuses on future-oriented planning. As a result the underlying model and the visualization have to be tightly coupled in order for users to gain knowledge. Users have the possibility to interactively alter a model's parameters according to their knowledge, consequently the visualization adjusts to the model in a feedback-loop. Knowledge generation is one important research area where Visual Analytics is of great use~\cite{keim2010mastering}, especially when considering uncertainty of heterogeneous data from various data sources \cite{SSK+16a} The adequate support of diverse users is another field of research where Visual Analytics methods are beneficial.)
+\end{itemize}
+
 
 \section{BigGIS Platform}
 \label{sec:biggis}
@@ -300,29 +303,34 @@ geographical information systems based on the semantic meta data~\cite{Frank.201
 \subsection{Continuous Refinement Model in BigGIS}
 \label{sec:crm}
 
-\begin{figure*}
-\centering
-	\includegraphics[width=\textwidth]{figures/biggis-workflow}
-	\caption{Generic integrated analytical pipeline approach of BigGIS platform showing general purpose Continuous Refinement Process. Overcoming the usability gap between raw data and feature extraction (information gain, insight) and handling uncertainty in acquired data through indirect and direct semantic-level and expert-level support leveraged by the Knowledge Generation Model for Visual Analytics is one main contribution of BigGIS. Indirect support results from defined Refinement Gates (R-Gates \textcolor{blue}{\quadrat}).}
-	\label{fig:biggisworkflow}
-\end{figure*}
+%\begin{itemize}
+%	\item \textcolor{red}{ToDO@Patrick} (1st draft: Describing general aspects of the CRM in BigGIS. Subsubsections should match the contribution/content mentioned in the Introduction's last paragraph).
+%	\item \textcolor{red}{ToDO@Patrick} (1st draft: High-Level description of end-to-end workflow)
+%\end{itemize}
+In this section, we briefly describe the continuous refinement model in BigGIS, consisting of an integrated analytics pipeline which blends analytics and semantic reasoning on system-side with knowledge extraction and generation on human-side and thereby modelling uncertainty to continuously refining results as shown in Figure \ref{fig:biggisworkflow}.
 
-\begin{itemize}
-	\item \textcolor{red}{ToDO@Patrick} (1st draft: Describing general aspects of the CRM in BigGIS. Subsubsections should match the contribution/content mentioned in the Introduction's last paragraph).
-	\item \textcolor{red}{ToDO@Patrick} (1st draft: High-Level description of end-to-end workflow)
-\end{itemize}
+%Providing meaningful predictive and prescriptive decision support is no trivial task. Spatially distributed data sources volunteered geographic information and participatory sensing data Fortunately, semantics reasoning and human-related knowledge extraction and generation help to 
+
+\begin{figure}
+\centering
+	\includegraphics[width=\linewidth]{figures/biggis-workflow_v3}
+	\caption{Continuous Refinement Model in BigGIS}
+	\label{fig:biggisworkflow}
+\end{figure}
+%Generic integrated analytical pipeline approach of BigGIS platform showing general purpose Continuous Refinement Process. Overcoming the usability gap between raw data and feature extraction (information gain, insight) and handling uncertainty in acquired data through indirect and direct semantic-level and expert-level support leveraged by the Knowledge Generation Model for Visual Analytics is one main contribution of BigGIS. Indirect support results from defined Refinement Gates (R-Gates \textcolor{yellow}{\quadrat}).
+
 
 \subsubsection{Data}
 
 \subsubsection{Semantic Reasoning}
-Locating all available data sources that are relevant for meaningful findings in analytical processes is hard to do when it has to be done manually. Semantic Web technology helps to describe data sources semantically using	widely-used vocabularies. Furthermore, semantic reasoning enables machines to discover suitable sources even if they are described differently, provided that an appropriate ontology supports the system.
+Locating all available data sources that are relevant for meaningful findings in analytical processes is hard to do when it has to be done manually. Semantic Web technology helps to describe data sources semantically using widely-used vocabularies. Furthermore, semantic reasoning enables machines to discover suitable sources even if they are described differently, provided that an appropriate ontology supports the system.
 
 \subsubsection{Knowledge Extraction and Generation}
 
 \subsubsection{Integrated Analytical Pipeline}
 
 \subsubsection{Dealing with Uncertainty}
-When considering uncertain data like volunteered geographic information and participatory sensing data in geographical information systems, we also have to deal with uncertainty. To address this challenge, we apply semantic reasoning on the provenance information of data sources in order to infer a level of uncertainty that can be considered in the analytical processes.
+When considering uncertain data like volunteered geographic information and participatory sensing data in geographic information systems, we also have to deal with uncertainty. To address this challenge, we apply semantic reasoning on the provenance information of data sources in order to infer a level of uncertainty that can be considered in the analytical processes.
 
 \subsection{Challenges}
 \label{sec:chls}
