@@ -243,11 +243,19 @@ between data and problem domain \cite{SSS+14a}.
 %	\item decision fatigue refers to the deteriorating quality of decisions made by an individual, after a long session of decision making \url{https://en.wikipedia.org/wiki/Decision_fatigue}
 %\end{itemize}
 
+<<<<<<< HEAD
 In this paper, we present the vision of \textit{BigGIS}, a new generation 
 predictive and prescriptive GIS, that
 leverages big data analytics, semantic reasoning and visual analytics
 methodologies. Our approach symbiotically combines system-side computation,
 data storage and semantic reasoning capabilities with human-side perceptive
+=======
+In this paper, we present the vision of \textit{BigGIS}, a new generation
+\textcolor{red}{uncertainty-aware??} \textcolor{blue}{do we have to emphasize that? according to the 4Vs this is an intrinsic part of big data, which we have to deal with.} predictive and prescriptive GIS, that
+leverages big data analytics, semantics reasoning and visual analytics
+methodologies. Our approach symbiotically combines machine-side computation,
+data storage and semantics reasoning capabilities with human-side perceptive
+>>>>>>> upstream/master
 skills, cognitive reasoning and domain knowledge. Considering uncertainty to be
 reciprocally related to generating new insights and consequently to knowledge,
 we introduce a novel \textit{continuous refinement model} in Section
@@ -284,6 +292,7 @@ We group related work into geo-spatial big data-analytics platforms and uncertai
 	\item Plasmap\footnote{\url{https://plasmap.io/}} is a high-performance 
   geo-processing platform that provides a lightweight query language for 
   high-performance location discovery based on OpenStreetMap. Plasmap differs 
+<<<<<<< HEAD
   from BigGIS ... TODO.
 \end{itemize}
 
@@ -296,6 +305,17 @@ We group related work into geo-spatial big data-analytics platforms and uncertai
 	\item \textcolor{red}{ToDO@Manuel@Daniel} (Visual Analytics: Knowledge generation Model for Visual Analytics \cite{SSS+14a}, Analyses are often performed in a descriptive, predictive or prescriptive way. While the descriptive analysis visualizes the status quo, predictive and prescriptive analysis focuses on future-oriented planning. As a result the underlying model and the visualization have to be tightly coupled in order for users to gain knowledge. Users have the possibility to interactively alter a model's parameters according to their knowledge, consequently the visualization adjusts to the model in a feedback-loop. Knowledge generation is one important research area where Visual Analytics is of great use~\cite{keim2010mastering}, especially when considering uncertainty of heterogeneous data from various data sources \cite{SSK+16a} The adequate support of diverse users is another field of research where Visual Analytics methods are beneficial.)
 \end{itemize}
 
+=======
+  from BigGIS ... TODO.
+  
+	\item \textcolor{red}{ToDO@Patrick} (Big Data architectures: Lambda architecture \cite{Marz2014}, Kappa architecture \cite{Kreps2014})
+	\item \textcolor{red}{ToDO@Julian} (Analytics aka Magic)
+	\item \textcolor{red}{ToDO@Matthias} (Semantics: Congintive Apps, Linked APIs)
+	Preconditions for meaningful findings in geographical information systems are accurate, consistent and complete data as input for analytical processes. However, sources of spacial data are distributed and quality of the data is varying, especially when considering uncertain data like volunteered geographic information and participatory sensing data. We address this challenge by a smart data integration approach~\cite{Frank.2016a} which is based on semantically described data sources and data transformation services. Smart web services dynamically compose workflows of data sources and data transformation services adopted to the requirements of different
+geographical information systems based on the semantic meta data~\cite{Frank.2016b}.
+	\item \textcolor{red}{ToDO@Manuel@Daniel} (Visual Analytics: Knowledge generation Model for Visual Analytics \cite{SSS+14a}, Analyses are often performed in a descriptive, predictive or prescriptive way. While the descriptive analysis visualizes the status quo, predictive and prescriptive analysis focuses on future-oriented planning. As a result the underlying model and the visualization have to be tightly coupled in order for users to gain knowledge. Users have the possibility to interactively alter a model's parameters according to their knowledge, consequently the visualization adjusts to the model in a feedback-loop. Knowledge generation is one important research area where Visual Analytics is of great use~\cite{keim2010mastering}, especially when considering uncertainty of heterogeneous data from various data sources \cite{SSK+16a}. \textcolor{blue}{J\"ackle et al. present one possible visualization technique \cite{JSBK15} for data and uncertainties of large spatial datasets, which is crucial within use-cases where both facets are of importance for decision making.} \\The adequate support of diverse users is another field of research where Visual Analytics methods are beneficial.)  
+\end{itemize}
+>>>>>>> upstream/master
 
 \section{BigGIS Platform}
 \label{sec:biggis}
@@ -344,6 +364,8 @@ When considering uncertain data like volunteered geographic information and part
 \section{Use Cases}
 \textcolor{red}{ToDO@all} BigGIS will support decision making in multiple use cases which require processing of large and heterogeneous data sets. The prototype will be evaluated on three scenarios: (1) smart city and health, i.e. predicting urban heat islands, (2) environmental management, i.e. prediciting spread of invasive pests, (3) emergency management, i.e. predicting dispersion of toxic gases.
 
+\textcolor{blue}{Comment: We have to describe why these use-cases can only be tackled in a big data context or why they would profit from the availability of big data. One example with the environmental management scenario, where farmers can provide real-time (velocity) data, in different forms (private weather station (numbers), photos of the spotted-wing drosophila/ambrosia, messages (text) => variety), but it comes with a low veracity/high uncertainty. And the combination of this data with the already available data (volume) we can make predictions possible or make them better than before.} 
+
 
 \section{Discussion and Future Work}
 \textcolor{red}{ToDO@all} (In the discussion part we discuss the advantages and disadvantages of our approach. In the conclusion we again shortly summarize in our own words what we just presented and give insight about future work.)
@@ -352,6 +374,9 @@ When considering uncertain data like volunteered geographic information and part
 %ACKNOWLEDGMENTS are optional
 \section{Acknowledgements}
 \textcolor{red}{ToDO@all} What to place here?
+
+\textcolor{blue}{This research has been funded by the Federal Ministry of Education and Research of Germany (subsidy program IKT 2020 - Forschung f\"ur Innovation).}
+
 %
 % The following two commands are all you need in the
 % initial runs of your .tex file to
