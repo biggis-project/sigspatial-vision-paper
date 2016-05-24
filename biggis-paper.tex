@@ -94,42 +94,42 @@ Firstname Lastname\titlenote{Maybe put address, e-mail here if allowed}\\
        \affaddr{University of Applied Sciences Karlsruhe}\\
        \affaddr{Moltkestr. 30}\\
        \affaddr{Karlsruhe, Germany}\\
-       \email{vorname.nachname@hs-karlsruhe.de}
+       \email{firstname.lastname@hs-karlsruhe.de}
 % 2nd. author
 \alignauthor
 Firstname Lastname\titlenote{Maybe put address, e-mail here if allowed}\\
        \affaddr{FZI Research Center for Information Technology}\\
        \affaddr{Haid-und-Neu-Str. 10-14}\\
        \affaddr{Karlsruhe, Germany}\\
-       \email{nachname@fzi.de}
+       \email{lastname@fzi.de}
 % 3rd. author
 \alignauthor
 Firstname Lastname\titlenote{Maybe put address, e-mail here if allowed}\\
        \affaddr{Data Analysis and Visualization Group}\\
        \affaddr{University of Konstanz}\\
        \affaddr{Konstanz, Germany}\\
-       \email{vorname.nachname@uni-konstanz.de}
+       \email{firstname.lastname@uni-konstanz.de}
 %\and  % use '\and' if you need 'another row' of author names
-%% 4th. author
+%%% 4th. author
 %\alignauthor
-%Firstname Lastname\titlenote{Lorem Ipsum}\\
+%Firstname Lastname\\
 %       \affaddr{FZI Research Center for Information Technology}\\
 %       \affaddr{Haid-und-Neu-Str. 10-14}\\
 %       \affaddr{Karlsruhe, Germany}\\
-%       \email{nachname@fzi.de}
+%       \email{lastname@fzi.de}
 %%% 5th. author
 %\alignauthor
-%Firstname Lastname\titlenote{Lorem Ipsum}\\
+%Firstname Lastname\\
 %       \affaddr{Data Analysis and Visualization Group}\\
 %       \affaddr{University of Konstanz}\\
 %       \affaddr{Konstanz, Germany}\\
-%       \email{vorname.nachname@uni-konstanz.de}
+%       \email{firstname.lastname@uni-konstanz.de}
 %%% 6th. author
 %\alignauthor
-%Firstname Lastname\titlenote{Lorem Ipsum}\\
+%Firstname Lastname\\
 %       \affaddr{Data Analysis and Visualization Group}\\
 %       \affaddr{University of Konstanz}\\
-%       \affaddr{Karlsruhe, Germany}\\
+%       \affaddr{Konstanz, Germany}\\
 %       \email{firstname.lastname@uni-konstanz.de}
 }
 % There's nothing stopping you putting the seventh, eighth, etc.
@@ -206,7 +206,7 @@ email: {\texttt{jsmith@konstanz.de}}).}
 \section{Introduction}
 \label{sec:intro}
 Geographic information systems (GIS) have long been used for geospatial data
-analyses and visualizations to support the decision making process in many
+analyses and visualizations to support the decision making process \cite{Crossland1995} in many
 domains like civil planning, environment and nature protection or emergency
 management. Thereby geospatial data has always been big data. Petabytes of
 remotely sensed archival geodata (\textit{volume}) and a rapidly increasing
@@ -223,7 +223,7 @@ tackle the aforementioned big data induced requirements, there are still two
 major open issues. Firstly, dealing with varying data types across multiple data
 sources (\textit{variety}) leading to data and schema heterogenity, e.g. to
 describe locations, like addresses, relative spatial relationships or different
-coordinates reference systems \cite{Frank.2016a}. Secondly, modeling the
+coordinates reference systems \cite{Frank.2016a}. Secondly, modelling the
 inherent uncertainties in data (\textit{veracity}), e.g. real-world noise and
 errorneous values due to the nature of the data collecting process
 \cite{Xiang2016}. Both being crucial tasks in data management and analytics that
@@ -275,7 +275,7 @@ meaningful predictive and prescriptive decision support in various fields
 \\
 \textcolor{red}{ToDO@Viliam} Plasmap\footnote{\url{https://plasmap.io/}} is a high performance geo-processing platform that provides a lightweight query language for high-performance location discovery based on OpenStreetMap. Plasmap differs from BigGIS ... TODO.
 \\
-\textcolor{red}{ToDO@Julian} (Analytics aka Magic)
+\textcolor{red}{ToDO@Julian} (Analytics aka Magic) e.g. \cite{Shmueli2011} spatial predictive, prescriptive analytics, modelling uncertainty etc.
 \\
 \textcolor{red}{ToDO@Matthias (Are there any GIS leveraging semantic web technologies? e.g. \textcolor{blue}{\url{http://bit.ly/27HjOuX}})} Preconditions for meaningful findings in GIS are accurate, consistent and complete data as input for analytical processes. However, sources of spatial data are distributed and quality of the data is varying, especially when considering uncertain data like volunteered geographic information and participatory sensing data. We address this challenge by a smart data integration approach~\cite{Frank.2016a} which is based on semantically described data sources and data transformation services. Smart web services dynamically compose workflows of data sources and data transformation services adopted to the requirements of different GISs based on the semantic meta data~\cite{Frank.2016b}.
 \\
