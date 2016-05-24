@@ -208,7 +208,7 @@ email: {\texttt{jsmith@konstanz.de}}).}
 Geographic information systems (GIS) have long been used for geospatial data
 analyses and visualizations to support the decision making process \cite{Crossland1995} in many
 domains like civil planning, environment and nature protection or emergency
-management. Thereby geospatial data has always been big data. Petabytes of
+management. Thereby geospatial data have always been big data. Petabytes of
 remotely sensed archival geodata (\textit{volume}) and a rapidly increasing
 amount of real-time sensor data streams (\textit{velocity}) accelerate the need
 for big data analytics in order to effectively model and efficiently process
@@ -235,7 +235,8 @@ address high volume batch and high velocity stream analytics in their design of
 a closed unified analytical GIS platform \cite{Thakur2015}. While the importance
 of such systems to efficiently deal with large amount of data is obvious,
 computers miss the creativity of human analysis to create hidden connections
-between data and problem domain \cite{SSS+14a}.
+between data and problem domain \cite{SSS+14a}.
+
 In this paper, we present the vision of \textit{BigGIS}, a new generation 
 predictive and prescriptive GIS, that
 leverages big data analytics, semantic reasoning and visual analytics
@@ -276,6 +277,8 @@ meaningful predictive and prescriptive decision support in various fields
 \textcolor{red}{ToDO@Viliam} Plasmap\footnote{\url{https://plasmap.io/}} is a high performance geo-processing platform that provides a lightweight query language for high-performance location discovery based on OpenStreetMap. Plasmap differs from BigGIS ... TODO.
 \\
 \textcolor{red}{ToDO@Julian} (Analytics aka Magic) e.g. \cite{Shmueli2011} spatial predictive, prescriptive analytics, modelling uncertainty etc.
+-> more methodological?
+-> statistics for spatio-temporal data, copula uni münster, ?
 \\
 \textcolor{red}{ToDO@Matthias (Are there any GIS leveraging semantic web technologies? e.g. \textcolor{blue}{\url{http://bit.ly/27HjOuX}})} Preconditions for meaningful findings in GIS are accurate, consistent and complete data as input for analytical processes. However, sources of spatial data are distributed and quality of the data is varying, especially when considering uncertain data like volunteered geographic information and participatory sensing data. We address this challenge by a smart data integration approach~\cite{Frank.2016a} which is based on semantically described data sources and data transformation services. Smart web services dynamically compose workflows of data sources and data transformation services adopted to the requirements of different GISs based on the semantic meta data~\cite{Frank.2016b}.
 \\
@@ -339,6 +342,8 @@ Locating all available data sources that are relevant for meaningful findings in
 \end{inparaenum}
 The system intelligently learns from the provided external domain knowledge, such that it can reuse it in the future (indirect expert support). Thus, leading to an increasing likelihood of relevant findings by users during the course of exploration and eventually to generating new knowledge.
 \textcolor{red}{ToDO@Manuel@Daniel: please rework this section, any further ideas?}
+\textcolor{red}{ToDO@Julian: Analytical approach}
+
 
 
 \subsubsection{Modelling Uncertainty}
@@ -357,14 +362,18 @@ We identify X major challenges... Firstly, ... Secondly, ... Thirdly, ...
 	\item \textcolor{red}{ToDO@all}: What challenges do we expect to have? According to the Subsections in Section \ref{sec:crm}
 	\item Handling big data related requirements: volume, velocity, variety and veracity
 	\item Volume and velocity are well-addressed requirements through highly scalable cloud-based architectures such as lambda architecture or kappa architecture. However, dealing with data and schema heterogenity and inherent uncertainty is an interesting field of research for geographic information systems that BigGIS addresses.  
+	\item Dimension reduction for spatio-temporal data
+	\item bias-variance trade-off / robustness
+	\item runtime issues in real usage and transformation knowledge to user
 \end{itemize}
 
-\section{Use Cases}\textcolor{red}{ToDO@all: please review and comment}
+\section{Use Cases}
+\textcolor{red}{ToDO@all: please review and comment}
 \\BigGIS will support decision making in multiple use cases that require processing of large and heterogeneous spatio-temporal data from unreliable sources. The prototype will be evaluated on three scenarios: 
 \begin{inparaenum}[(1)]
-	\item smart city and health, i.e. urban heat islands problem,
-	\item environmental management, i.e. spread of invasive pests,
-	\item emergency management, i.e. dispersion of toxic gases.
+	\item smart city and health, i.e. heat stress in urban areas,
+	\item environmental management, i.e. spread of invasive species,
+	\item emergency management, i.e. identification and dispersion in chemical accidents .
 \end{inparaenum}
 These scenarios represent diverse categories of application domains that each address varying big data related requirements. We assume that our proposed continuous refinement model in BigGIS allows tackling the requirements and helps generating meaningful knowledge. In brief, one example is the environmental management scenario, where farmers can provide real-time data (velocity) from differing sources (variety), e.g. private weather stations, photos of invasive species, or text messages about contaminated areas, though arriving with high uncertainty (veracity). The experts domain knowledge helps to train classifiers in BigGIS on already available labeled datasets (volume) that, in addition to further semantically described sources, helps conducting spatio-temporal statistics such as hot spot analyses to make better predictions on potentially jeopardized areas. Not only are farmers informed about the condition of their fields (descriptive) but also about risk potential of contamination (predictive), which lastly results in suggestions to perform certain counteractive measures (prescriptive).
 
