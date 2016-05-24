@@ -256,8 +256,9 @@ meaningful predictive and prescriptive decision support in various fields
 \cite{SSK+16a}. Our contribution lies in
 \begin{inparaenum}[(1)]
   \item an \textit{integrated analytical pipeline approach} which includes
-  \item \textit{semantic reasoning} as well as
-  \item \textit{human-related knowledge extraction and generation} to process
+  \item \textit{semantic reasoning}, 
+  \item \textit{human-related knowledge extraction and generation }as well as
+  \item \textit{modelling uncertainty} to process
   high volume, high velocity and high dimensional spatio-temporal data from
   unreliable and heterogeneous sources.
 \end{inparaenum}
@@ -347,12 +348,10 @@ The system intelligently learns from the provided external domain knowledge, suc
 
 
 \subsubsection{Modelling Uncertainty}
-\textcolor{red}{ToDO@Matthias: semantics-level}
-
-When considering uncertain data like volunteered geographic information and participatory sensed data in geographic information systems, we also have to deal with uncertainty. To address this challenge, we apply semantic reasoning on the provenance information of data sources in order to infer a level of uncertainty that can be considered in the analytical processes.
+Uncertainty is inherent in data as well as models~\cite{cressie2015statistics}. While this is often obvious in data like volunteered geographic information and participatory sensed data, this holds true for all available data. The instruments employed by e.g. an official meteorological station have inaccuracies. Models derived from data are only perfectly applicable for the data upon which they are learned. Expert knowledge has some inherent uncertainty. To handle these uncertainties we express them as \textit{conditional probabilities}. These conditional probabilities allow us to evaluate and model the uncertainty of each data point as well as forecast of an analytical model. We apply semantic reasoning on the provenance information of data sources in order to infer a level of uncertainty that can be considered in the analytical processes. We use \textit{Bayesian Hierarchical Models} to be able to cope with the conditional probabilities quantified by the semantic reasoning. The idea behind these models is that we can model the different parameters by their joint probability distribution. Each parameter can be model by hyper-parameters, which are again probability distributions. The results models are then probability distributions as well, which can then be used in our continuous refinement model.By doing so, we can model, examine and present the uncertainty at each stage of the model to enable the user of BigGIS to make a well informed decision. 
 
 \textcolor{red}{ToDO@Manuel@Daniel: please add text from VA perspective, how do we handle uncertainty?}\newline
-\textcolor{red}{ToDO@Julian: please add text from Analytics perspective, how do we handle uncertainty?}
+
 
 \subsection{Challenges}
 \label{sec:chls}
