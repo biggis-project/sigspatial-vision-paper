@@ -463,9 +463,13 @@ We identify X major challenges... Firstly, ... Secondly, ... Thirdly, ...
 	\item \textcolor{red}{ToDO@all}: What challenges do we expect to have? According to the Subsections in Section \ref{sec:crm}
 	\item Handling big data related requirements: volume, velocity, variety and veracity
 	\item Volume and velocity are well-addressed requirements through highly scalable cloud-based architectures such as lambda architecture or kappa architecture. However, dealing with data and schema heterogenity and inherent uncertainty is an interesting field of research for geographic information systems that BigGIS addresses.  
-	\item Dimension reduction for spatio-temporal data
-	\item bias-variance trade-off / robustness
-	\item runtime issues in real usage and transformation knowledge to user
+	\item Dimension reduction for spatio-temporal data \\
+    The continuous refinement model employed in BigGIS is dependent on a fast computation of possible data sources. The used data is high-dimensional and models built upon this data can easily fall to the curse of dimensionality. Also, while the presented architecture can handle the challenges of Big Data, it is not always possible to transfer all the raw data to our pipeline. In case of an automated sensor, e.g. on a drone, the transfer of the data is dependent on the available bandwidth. The BigGIS project aims to deal with the challenge of dimension reduction for spatio-temporal data.
+	\item bias-variance trade-off / robustness \\
+	There is the ongoing challenge to balance between the robustness of a model and the adaptability to the training/input data. This so called bias-variance trade-off~\cite{Hastie2009} is of particular interest in this project, as the use of the continuous refinement as well as the use of the uncertainties are inherently connected to this. The optimal way to solve this trade-off will be highly dependent on the use uses and we hope to add to this challenge.
+	\item runtime issues in real usage and transformation knowledge to user \\
+	The knowledge gained by the proposed BigGIS has to be transferred to the user in the end. Here, the challenge lies in the speed of the computation, the different level of expertise for each user and the available bandwidth to transfer informations back to the user and/or analytical pipeline. To give the user the needed knowledge under these restrictions is one challenge which we hope to present a solution for.
+	
 \end{itemize}
 
 \section{Use Cases}
@@ -491,6 +495,11 @@ jeopardized areas. Not only are farmers informed about the condition of their
 fields (descriptive) but also about risk potential of contamination 
 (predictive), which lastly results in suggestions to perform certain 
 counteractive measures (prescriptive).
+\subsection{BOS}
+%this is just an alternative scenario; speech has to be updated.
+An illustrating use-case is found in the emergency management. There the goal is to create an in-depth overview for rescue forces in a small time frame (velocity). We regard a fire in a chemical plant. From the time of the first alert to the arrival of the rescue forces several data sources are producing data. Automated sensors (fixed or on drones) are creating data in size of several GB per minute (volume). Data gathered by social media creates additional informations (veracity, variety). By combining those datasets, the rescue forces already have an overview by their arrival and can use their resources optimal. Based on the automated sensors, an analysis of the content 
+of the chemical fire is presented. Also, a forecast of the possible spread of the smoke with conditional probabilities is generated. This forecast is then combined by risk-maps of the surrounding areas to highlight the danger zones. While arriving and at the accident site, the rescue forces can direct the automated sensors according to their expert knowledge or let the automated routines compute the optimal sensor position. In total, an accurate overview (descriptive) is generated, possible spreads are computed (predictive) and the most likely areas at risk are highlighted (prescriptive). 
+
 
 
 \section{Discussion and Future Work}
