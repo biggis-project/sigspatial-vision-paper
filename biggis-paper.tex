@@ -98,45 +98,45 @@ based on High-Dimensional Geo-Temporal Data Structures ("Vision Paper")}
 \alignauthor
 Firstname Lastname\\
        \affaddr{University of Applied Sciences Karlsruhe}\\
-       \affaddr{Moltkestr. 30}\\
+%       \affaddr{Moltkestr. 30}\\
        \affaddr{Karlsruhe, Germany}\\
        \email{firstname.lastname@hs-karlsruhe.de}
 % 2nd. author
 \alignauthor
 Firstname Lastname\\
-       \affaddr{FZI Research Center for Information Technology}\\
-       \affaddr{Haid-und-Neu-Str. 10-14}\\
+       \affaddr{University of Applied Sciences Karlsruhe}\\
+%       \affaddr{Moltkestr. 30}\\
        \affaddr{Karlsruhe, Germany}\\
-       \email{lastname@fzi.de}
+       \email{firstname.lastname@hs-karlsruhe.de}
 % 3rd. author
 \alignauthor
 Firstname Lastname\\
-       \affaddr{Data Analysis and Visualization Group}\\
+       \affaddr{FZI Research Center for Information Technology}\\
+%       \affaddr{Haid-und-Neu-Str. 10-14}\\
+       \affaddr{Karlsruhe, Germany}\\
+       \email{lastname@fzi.de}
+\and  % use '\and' if you need 'another row' of author names
+%% 4th. author
+\alignauthor
+Firstname Lastname\\
+       \affaddr{FZI Research Center for Information Technology}\\
+%       \affaddr{Haid-und-Neu-Str. 10-14}\\
+       \affaddr{Karlsruhe, Germany}\\
+       \email{lastname@fzi.de}
+%% 5th. author
+\alignauthor
+Firstname Lastname\\
+%       \affaddr{Data Analysis and Visualization Group}\\
        \affaddr{University of Konstanz}\\
        \affaddr{Konstanz, Germany}\\
        \email{firstname.lastname@uni-konstanz.de}
-%\and  % use '\and' if you need 'another row' of author names
-%%% 4th. author
-%\alignauthor
-%Firstname Lastname\\
-%       \affaddr{FZI Research Center for Information Technology}\\
-%       \affaddr{Haid-und-Neu-Str. 10-14}\\
-%       \affaddr{Karlsruhe, Germany}\\
-%       \email{lastname@fzi.de}
-%%% 5th. author
-%\alignauthor
-%Firstname Lastname\\
+%% 6th. author
+\alignauthor
+Firstname Lastname\\
 %       \affaddr{Data Analysis and Visualization Group}\\
-%       \affaddr{University of Konstanz}\\
-%       \affaddr{Konstanz, Germany}\\
-%       \email{firstname.lastname@uni-konstanz.de}
-%%% 6th. author
-%\alignauthor
-%Firstname Lastname\\
-%       \affaddr{Data Analysis and Visualization Group}\\
-%       \affaddr{University of Konstanz}\\
-%       \affaddr{Konstanz, Germany}\\
-%       \email{firstname.lastname@uni-konstanz.de}
+       \affaddr{University of Konstanz}\\
+       \affaddr{Konstanz, Germany}\\
+       \email{firstname.lastname@uni-konstanz.de}
 }
 % There's nothing stopping you putting the seventh, eighth, etc.
 % author on the opening page (as the 'third row') but we ask,
@@ -154,21 +154,23 @@ email: {\texttt{jsmith@konstanz.de}}).}
 
 \maketitle
 \begin{abstract}
-\textcolor{red}{ToDO@Patrick} %Geospatial data has always been Big Data – however today’s geographic
-%information systems reach their limits due to rapidly growing geo-related data
-%volumes. Especially in real-time processing, these systems do not provide a
-%sufficient design. New technologies and architectures are emerging from the
-%context of Big Data and gain increasing importance. Based on the question
-%whether these Big Data-technologies are suitable, this thesis’ objective is to
-%design an own Big Data-architecture for geo-related near real-time data stream
-%processing. This architecture intends to serve as a prescriptive decision
-%support for a specific use case in the disaster control
-%(Geospatial data has always been Big Data. However today's geographic
-%information systems reach their limits due to rapidly growing geo-related data
-%volumes. Especially in real-time processing, these systems do not provide a
-%sufficient design. New technologies and architectures are emerging from the
-%context of Big Data and gain increasing importance. However, dealing with a
-%variety of different data and uncertainty still remains a crucial task.)
+Geographic information systems (GIS) are important tools for decision support
+based on spatial data. Due to technical and economical progress an ever
+increasing number of data sources are available leading to rapidly growing fast
+and unreliable amount of data that can be beneficial 
+\begin{inparaenum}[(1)]
+	\item in the approximation of multivariate and causal predictions of future
+values as well as
+	\item in robust an proactive decision-making process. 
+\end{inparaenum}
+However, today's GIS are not designed for such demands and require new
+methodologies to effectively model uncertainty and generate meaningful
+knowledge. In this work, we introduce \textit{BigGIS}, a predictive and
+prescriptive spatio-temporal analytics platform, that symbiotically
+combines big data analytics, semantics and visual analytics methodologies. 
+We introduce a novel continuous refinement model, present key elements and 
+future challenges as we begin a collaborative research program into
+methodologies for big data analysis and design for a big data enabled GIS.
 \end{abstract}
 
 
@@ -220,12 +222,11 @@ email: {\texttt{jsmith@konstanz.de}}).}
 % We no longer use \terms command
 %\terms{Theory}
 
-\keywords{knowledge generation; analytics; data architecture}
+\keywords{knowledge generation; big data analytics; data architecture}
 
 \section{Introduction}
 \label{sec:intro}
-Geographic information systems (GIS) have long been used for geospatial data
-analyses and visualizations to support the decision making process
+GIS have long been used to support the decision-making process
 \cite{Crossland1995} in many
 domains like civil planning, environment and nature protection or emergency
 management. Thereby geospatial data have always been big data. Petabytes of
@@ -235,28 +236,28 @@ for big data analytics in order to effectively model and efficiently process
 complex geo-temporal problems. In the past, limited access to computing power
 has been a bottleneck \cite{OGC2013}. However, in the era of cloud computing,
 leveraging cloud-based resources is a widely adopted pattern (hardware level).
-In addition, with the advent of big data analytics and its ever increasing
-scope
-of application, performing massively parallel analytical tasks on large-scale
+In addition, with the advent of big data analytics, performing massively
+parallel analytical tasks on large-scale
 data at rest or data in motion is as well becoming a feasible approach shaping
 the design of today's GIS (software-level). Although scaling out enables GIS to
 tackle the aforementioned big data induced requirements, there are still two
 major open issues. Firstly, dealing with varying data types across multiple
 data
-sources (\textit{variety}) leading to data and schema heterogenity, e.g. to
+sources (\textit{variety}) lead to data and schema heterogenity, e.g. to
 describe locations, like addresses, relative spatial relationships or different
 coordinates reference systems \cite{Frank.2016a}. Secondly, modelling the
 inherent uncertainties in data (\textit{veracity}), e.g. real-world noise and
-errorneous values due to the nature of the data collecting process
-\cite{Xiang2016}. Both being crucial tasks in data management and analytics
+errorneous values due to the nature of the data collecting process. 
+%\cite{Xiang2016}
+Both being crucial tasks in data management and analytics
 that
-directly affect the information retrieval and decision making quality and
+directly affect the information retrieval and decision-making quality and
 moreover the generated knowledge on human-side (\textit{value}). Delegating
 this
-to only predefined and computed metrics often deprioritizes more important
+to only computed metrics often deprioritizes more important
 macro
 aspects of the problem. Current approaches mainly
-address high volume batch and high velocity stream analytics in their design of
+address batch and stream analytics in their design oftentimes implemented as
 a closed unified analytical GIS platform \cite{Thakur2015}. While the
 importance
 of such systems to efficiently deal with large amount of data is obvious,
@@ -266,19 +267,12 @@ between data and problem domain \cite{SSS+14a}.
 In this paper, we present the vision of \textit{BigGIS}, a new generation 
 predictive and prescriptive GIS, that
 leverages big data analytics, semantic reasoning and visual analytics
-methodologies. Our approach symbiotically combines system-side computation,
+methodologies. This approach symbiotically combines system-side computation,
 data storage and semantic reasoning capabilities with human-side perceptive
 skills, cognitive reasoning and domain knowledge. We introduce a novel
-\textit{continuous refinement model} in Section
-\ref{sec:crm} to gradually minimize the real-world noise and dissolve
-heterogenity in data and metadata such that the information gain can be
-maximized. Based on the well-established knowledge generation model for visual
-analytics introduced in \cite{SSS+14a} this will on one hand allow to steadily
-improve the analysis results by updating deployed machine learning models, on
-the other hand to build the user's trust in these results by creating awareness
-of underlying uncertainties and data provenance which is key for providing
-meaningful predictive and prescriptive decision support in various fields
-\cite{SSK+16a}. Our contribution lies in
+\textit{continuous refinement model} to gradually minimize the real-world noise
+and dissolve heterogenity in data and metadata such that the information gain
+can be maximized. Our contribution lies in
 \begin{inparaenum}[(1)]
   \item an \textit{integrated analytical pipeline approach} which includes
   \item \textit{semantic reasoning}, 
@@ -288,11 +282,17 @@ meaningful predictive and prescriptive decision support in various fields
   unreliable and heterogeneous sources.
 \end{inparaenum}
 
+Section \ref{sec:related} discusses related work and influencing fields of r
+esearch. The platforms' design is introduced in Section \ref{sec:biggis}
+through the continuous refinement model, while major challenges are
+presented. Use cases shown in Section \ref{sec:use}. Finally, Section
+\ref{sec:concl} concludes and addresses future research topics.
+
 \section{Related Work}
 \label{sec:related}
-Challenges related to the nature of big data, i.e. large, fast and diverse, has
+Challenges related to the nature of big data has
 lead to the evolution of new big data management and analytics architectures
-embracing bigdata-aware GIS \cite{Peng2014}. Marz proposes the lambda
+embracing big data-aware GIS \cite{Peng2014}. Marz proposes the lambda
 architecture \cite{Marz2013}, a generic, scalable and fault-tolerant data
 processing system design. By decomposing the problem into three layers, namely
 the batch layer, the speed layer, and the serving layer this architecture
@@ -313,7 +313,8 @@ interesting representative is Plasmap\footnote{\url{https://plasmap.io/}}, a
 high performance geo-processing platform that provides a lightweight,
 interactive query language for high-performance location discovery based on
 OpenStreetMap. Developments in the field of semantic web services show the
-opportunity of  adding  higher  semantic  levels  to existing frameworks,  to  improve 
+opportunity of  adding  higher  semantic  levels  to existing frameworks,  to
+improve
 their  usage  and  ease  scalability, allowing for reasoning and comprehensive
 responses~\cite{Tanasescu2006},~\cite{Frank.2016a},~\cite{Frank.2016b}.
 Analyses are often performed in a descriptive, predictive or prescriptive 
@@ -324,15 +325,15 @@ users to gain knowledge. Users have the possibility to interactively alter a
 model's parameters according to their knowledge, consequently the visualization
 adjusts to the model in a feedback-loop. Knowledge generation is one important 
 research area where visual analytics is of great
-use~\cite{Keim2008}, \cite{keim2010mastering}, especially when considering
-uncertainty of heterogeneous data from various data sources \cite{SSK+16a}. 
-Andrienko et al. states that geovisual analytics should find new approaches to
-deal with complexities of current data and address a research agenda for
-working with spatio-temporal data \cite{Andrienko2010}.
-J\"ackle et al. present one possible visualization  technique \cite{JSBK15} for
-data and uncertainties of large spatial datasets,  which is crucial within
-use cases where both facets are of importance for decision making.
-
+use~\cite{Keim2008}, \cite{keim2010mastering}, especially
+when considering uncertainty of heterogeneous spatio-temporal data from various
+data sources \cite{SSK+16a}. J\"ackle et al. present one possible visualization
+technique \cite{JSBK15} for data and uncertainties of large spatial datasets, 
+which is crucial within use cases where both facets are of importance for
+decision-making.
+%Andrienko et al. states that geovisual analytics need new approaches to
+%deal with the complexity of data and address a research agenda for
+%working with spatio-temporal data \cite{Andrienko2010}.
 % Plasmap differs from BigGIS in that domain expert knowledge is
 %not used to train the system during runtime.
 
@@ -341,16 +342,22 @@ use cases where both facets are of importance for decision making.
 
 \subsection{Continuous Refinement Model in BigGIS}
 \label{sec:crm}
- We consider uncertainty to be reciprocally related to generating new insights 
-and consequently knowledge. Thus, modelling uncertainty in BigGIS is a crucial 
-task. In this section, we briefly describe the continuous refinement model in 
-BigGIS from a high-level perspective, consisting of an integrated analytics 
-pipeline which blends analytics and semantic reasoning on system-side with 
-knowledge extraction and generation on human-side, thereby modelling
-uncertainty 
-to continuously refine results as shown in Figure \ref{fig:biggisworkflow}. 
-\textcolor{red}{ToDO@all: Clearly define terms of \textit{user}, 
-\textit{semantics}, \textit{expert knowledge}, see issue \#16}
+In this section, we briefly describe the continuous refinement model in
+BigGIS, which extends the knowledge generation model for visual
+analytics \cite{SSS+14a}. This will on one hand allow to steadily
+improve the analysis results e.g. by updating deployed machine learning models,
+and on the other hand to build the user's trust in these results by creating
+awareness of underlying uncertainties and data provenance which is key for
+providing meaningful predictive and prescriptive decision support in various
+fields \cite{SSK+16a}. We consider uncertainty to be reciprocally related to
+generating new insights and consequently knowledge. Thus, modelling
+uncertainty in BigGIS is a crucial  task. From a high-level perspective,
+our approach consists of an integrated analytics 
+pipeline which blends big data analytics and semantic reasoning on system-side
+with knowledge extraction and generation on human-side, thereby modelling
+uncertainty to continuously refine results as shown in Figure \ref{fig:biggisworkflow}. 
+%\textcolor{red}{ToDO@all: Clearly define terms of \textit{user}, 
+%\textit{semantics}, \textit{expert knowledge}, see issue \#16}
 
 
 \begin{figure}
@@ -426,18 +433,13 @@ parameters by their joint probability distribution. Each parameter can be model
 by hyper-parameters, which are again probability distributions. The results 
 models are then probability distributions as well, which can then be used in
 our continuous refinement model. By doing so, we can model, examine and present
-the uncertainty at each stage of the model to enable the user of BigGIS to make a 
+the uncertainty at each stage of the model to enable the user of BigGIS to make
+a
 well informed decision. 
 
 
 \subsection{Challenges}
 \label{sec:chls}
-%https://blog.plasmap.io/how-openstreetmap-helps-to-relieve-disasters/ 
-%Mapping new areas helps to create a further economic development. People also
-%will will be aware and better prepared for future disasters. During an
-%occurring crisis humanitarian organisations collect vast amounts of
-%geographical data. But the data is not always shared with all the other actors
-%and is often lost once the crisis is ending.
 We identify three major challenges that are presented in the following.
 
 \subsubsection{Varying big data related requirements}
@@ -488,8 +490,9 @@ the different level of expertise for each user and the available bandwidth to
 transfer informations back to the user and/or analytical pipeline.
 
 \section{Use Cases}
+\label{sec:use}
 %\textcolor{red}{ToDO@all: please review and comment}
-BigGIS will support decision making in multiple use cases that require
+BigGIS will support decision-making in multiple use cases that require
 processing of large and heterogeneous spatio-temporal data from unreliable
 sources. The prototype will be evaluated on three scenarios: 
 \begin{inparaenum}[(1)]
@@ -541,17 +544,19 @@ authorities and organizations that perform security tasks in
 these areas (prescriptive).
 
 
-\section{Discussion and Future Work}
-%\textcolor{red}{ToDO@all} (In the discussion part we discuss the advantages
-%and
-%disadvantages of our approach. We describe how we want to tackle the
-%challenges
-%addressed in Section \ref{sec:chls}. In the conclusion we again shortly
-%summarize in our own words what we just presented and give insight about
-%future
-%work.)
-We assume that our proposed continuous refinement model allows tackling the
-requirements and helps generating meaningful knowledge.
+\section{Conclusions and Future Work}
+\label{sec:concl}
+Big geo data is going to continue growing during the next years. The
+rapidly increasing distribution and usage of mobile devices and IoT on the one
+hand and emerging new data sources on the other hand lead to more diverse,
+larger, faster and unreliable data. In this paper, we proposed BigGIS, a new
+generation predictive and prescriptive GIS, that leverages big data analytics,
+semantic reasoning and visual analytics methodologies through a novel
+continuous refinement model, and showed what we consider are the key elements
+to overcome uncertainty and generate meaningful knowledge. Therefore,
+we identified three main challenges for the future. Currently, we are working
+on a integrated prototype to support each of the presented use cases.
+
 %\end{document}  % This is where a 'short' article might terminate
 
 %ACKNOWLEDGMENTS are optional
