@@ -143,10 +143,8 @@ Firstname Lastname\\
 % for aesthetic reasons that you place these 'additional authors'
 % in the \additional authors block, viz.
 \additionalauthors{\textcolor{red}{ToDO@all} John Smith (FZI,
-email: {\texttt{jsmith@fzi.de}}), John Smith (FZI,
 email: {\texttt{jsmith@fzi.de}}), John Smith (Konstanz,
-email: {\texttt{jsmith@konstanz.de}}), John Smith (Konstanz,
-email: {\texttt{jsmith@konstanz.de}}).}
+email: {\texttt{jsmith@konstanz.de}})}
 %\date{30 July 1999}
 % Just remember to make sure that the TOTAL number of authors
 % is the number that will appear on the first page PLUS the
@@ -282,10 +280,10 @@ can be maximized. Our contribution lies in
   unreliable and heterogeneous sources.
 \end{inparaenum}
 
-Section \ref{sec:related} discusses related work and influencing fields of r
-esearch. The platforms' design is introduced in Section \ref{sec:biggis}
+Section \ref{sec:related} discusses related work and influencing research
+fields. The platforms' design is introduced in Section \ref{sec:biggis}
 through the continuous refinement model, while major challenges are
-presented. Use cases shown in Section \ref{sec:use}. Finally, Section
+presented. Use cases are shown in Section \ref{sec:use}. Finally, Section
 \ref{sec:concl} concludes and addresses future research topics.
 
 \section{Related Work}
@@ -305,7 +303,7 @@ large volumes of historic data by harvesting real-time data on the fly, e.g.
 social media, or passive and participatory sensors. While this design allows
 for adhoc analysis ability during batch runs,
 the processing logic has to be implemented twice. In a more recent approach,
-Kreps critizes the overall complexity of the lambda architecture and presents
+Kreps criticizes the overall complexity of the lambda architecture and presents
 the kappa architecture~\cite{Kreps2014}, which simplifies the systems' design
 by neglecting the batch layer. To replace batch processing,
 static data is quickly fed through the streaming engine. An
@@ -316,7 +314,7 @@ OpenStreetMap. Developments in the field of semantic web services show the
 opportunity of  adding  higher  semantic  levels  to existing frameworks,  to
 improve
 their  usage  and  ease  scalability, allowing for reasoning and comprehensive
-responses~\cite{Tanasescu2006},~\cite{Frank.2016a},~\cite{Frank.2016b}.
+responses~\cite{Tanasescu2006, Frank.2016a, Frank.2016b}.
 Analyses are often performed in a descriptive, predictive or prescriptive 
 way. While the descriptive analysis visualizes the status quo, predictive and 
 prescriptive analysis focuses on future-oriented planning. As a result the 
@@ -325,7 +323,7 @@ users to gain knowledge. Users have the possibility to interactively alter a
 model's parameters according to their knowledge, consequently the visualization
 adjusts to the model in a feedback-loop. Knowledge generation is one important 
 research area where visual analytics is of great
-use~\cite{Keim2008}, \cite{keim2010mastering}, especially
+use~\cite{Keim2008, Keim2010}, especially
 when considering uncertainty of heterogeneous spatio-temporal data from various
 data sources \cite{SSK+16a}. J\"ackle et al. present one possible visualization
 technique \cite{JSBK15} for data and uncertainties of large spatial datasets, 
@@ -355,7 +353,8 @@ uncertainty in BigGIS is a crucial  task. From a high-level perspective,
 our approach consists of an integrated analytics 
 pipeline which blends big data analytics and semantic reasoning on system-side
 with knowledge extraction and generation on human-side, thereby modelling
-uncertainty to continuously refine results as shown in Figure \ref{fig:biggisworkflow}. 
+uncertainty to continuously refine results as shown in Figure
+\ref{fig:biggisworkflow}.
 %\textcolor{red}{ToDO@all: Clearly define terms of \textit{user}, 
 %\textit{semantics}, \textit{expert knowledge}, see issue \#16}
 
@@ -363,7 +362,7 @@ uncertainty to continuously refine results as shown in Figure \ref{fig:biggiswor
 \begin{figure}
 \centering
 	\includegraphics[width=\linewidth]{figures/biggis-workflow_v3}
-	\caption{Continuous Refinement Model in BigGIS}
+	\caption{Continuous refinement model in BigGIS.}
 	\label{fig:biggisworkflow}
 \end{figure}
 
@@ -498,8 +497,7 @@ sources. The prototype will be evaluated on three scenarios:
 \begin{inparaenum}[(1)]
 	\item smart city and health, i.e. heat stress in urban areas,
 	\item environmental management, i.e. spread of invasive species,
-	\item emergency management, i.e. identification and dispersion of hazardous
-gas in chemical accidents .
+	\item emergency management, i.e. identification and dispersion of hazardousgas in chemical accidents.
 \end{inparaenum}
 These scenarios represent diverse categories of application domains that each 
 address varying big data related requirements. 
@@ -538,8 +536,7 @@ classifiers in order to automatically classify the hazardous content and
 identify contaminated areas. Conditional probabilities are computed to forecast
 the dispersion of the hazardous smoke and visualized in risk-maps to highlight
 potentially endangered areas. Not only are the rescue forces informed about the
-current situation (descriptive), but also about risk potential of surrounding a
-reas (predictive), which can be used to automatically alert further public
+current situation (descriptive), but also about risk potential of surrounding areas (predictive), which can be used to automatically alert further public
 authorities and organizations that perform security tasks in
 these areas (prescriptive).
 
@@ -570,7 +567,8 @@ of Germany (subsidy program IKT 2020 -- Forschung f\"ur Innovation).
 % initial runs of your .tex file to
 % produce the bibliography for the citations in your paper.
 \bibliographystyle{abbrv}
-\bibliography{biggis-paper}  % sigproc.bib is the name of the Bibliography in
+\bibliography{biggis-paper}  % sigproc.bib is the name of the
+%Bibliography
 %this case
 % You must have a proper ".bib" file
 %  and remember to run:
