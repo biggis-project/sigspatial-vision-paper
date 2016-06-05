@@ -241,9 +241,9 @@ the design of today's GIS (software-level). Although scaling out enables GIS to
 tackle the aforementioned big data induced requirements, there are still two
 major open issues. Firstly, dealing with varying data types across multiple
 data
-sources (\textit{variety}) lead to data and schema heterogenity, e.g. to
+sources (\textit{variety}) lead to data and schema heterogeneity, e.g. to
 describe locations, like addresses, relative spatial relationships or different
-coordinates reference systems \cite{Frank.2016a}. Secondly, modelling the
+coordinates reference systems \cite{Frank.2016b}. Secondly, modelling the
 inherent uncertainties in data (\textit{veracity}), e.g. real-world noise and
 errorneous values due to the nature of the data collecting process. 
 %\cite{Xiang2016}
@@ -269,7 +269,7 @@ methodologies. This approach symbiotically combines system-side computation,
 data storage and semantic reasoning capabilities with human-side perceptive
 skills, cognitive reasoning and domain knowledge. We introduce a novel
 \textit{continuous refinement model} to gradually minimize the real-world noise
-and dissolve heterogenity in data and metadata such that the information gain
+and dissolve heterogeneity in data and metadata such that the information gain
 can be maximized. Our contribution lies in
 \begin{inparaenum}[(1)]
   \item an \textit{integrated analytical pipeline approach} which includes
@@ -450,7 +450,7 @@ managing the complex backend ecosystem for varying requirements is a
 non-trivial task. We approach this challenge by leveraging Apache
 Mesos\footnote{\url{http://mesos.apache.org/}} in combination with
 container technologies such as Docker \footnote{\url{https://www.docker.com/}}.
-In addition, dealing with data and schema heterogenity and
+In addition, dealing with data and schema heterogeneity and
 inherent uncertainty is another interesting field of research that BigGIS
 addresses.
 Preconditions for meaningful findings in GIS are accurate, consistent
@@ -458,9 +458,9 @@ and complete data as input for analytical processes. However, sources of
 spatio-temporal data are distributed and quality of the data is varying,
 especially
 when considering uncertain data like volunteered geographic information and
-participatory sensing data. We address this challenge by a smart data
-integration approach~\cite{Frank.2016a} which is based on semantically
-described data sources and data transformation services. Smart web services
+participatory sensing data. We intend to address this challenge by a smart data
+integration approach which is based on semantically
+described data sources and data transformation services as discussed in~\cite{Frank.2016a}. Smart web services
 dynamically compose workflows of data sources and data transformation services
 adopted to the requirements of different GISs based on the semantic meta
 data~\cite{Frank.2016b}. 
@@ -486,7 +486,7 @@ specific use case. Providing the user with sufficient information to reason and
 generate knowledge under these restrictions is one problem which we hope to
 present a solution for. Here, the challenge lies in the speed of computation,
 the different level of expertise for each user and the available bandwidth to
-transfer informations back to the user and/or analytical pipeline.
+transfer information back to the user and/or analytical pipeline.
 
 \section{Use Cases}
 \label{sec:use}
@@ -497,7 +497,7 @@ sources. The prototype will be evaluated on three scenarios:
 \begin{inparaenum}[(1)]
 	\item smart city and health, i.e. heat stress in urban areas,
 	\item environmental management, i.e. spread of invasive species,
-	\item emergency management, i.e. identification and dispersion of hazardousgas in chemical accidents.
+	\item emergency management, i.e. identification and dispersion of hazardous gas in chemical accidents.
 \end{inparaenum}
 These scenarios represent diverse categories of application domains that each 
 address varying big data related requirements. 
@@ -525,7 +525,7 @@ an in-depth overview of the current situation within a small time frame
 (velocity) is crucial to prevent exposing the surrounding population to any
 hazardous substances. Recent developments in the field of
 mobile robotics allow using in-situ components such as autonomously flying
-unmanned aerial vehicles equipped with a hyperspectral camera that produces
+unmanned aerial vehicles equipped with a hyper spectral camera that produces
 several gigabyte of raw data per mission (volume). In addition, differing
 sources (variety), e.g. private weather stations or social media streams, can
 be integrated in BigGIS, though arriving with high uncertainty
