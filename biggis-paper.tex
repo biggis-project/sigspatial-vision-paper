@@ -41,8 +41,6 @@ Francisco, California, USA}
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data
 %(0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
-%\title{BigGIS: A next generation predictive and prescriptive Geographic
-%Information System}
 \title{BigGIS: A Next Generation Predictive and Prescriptive Geographic
 Information System (Vision Paper)}
 %\titlenote{(Produces the permission block, and
@@ -227,7 +225,7 @@ GIS.
 \category{H.1.2}{User/Machine Systems}{Human information processing}
 \category{H.2.8}{Database Applications}{Spatial databases and GIS}
 
-\keywords{knowledge generation; big data analytics; data architecture}
+\keywords{knowledge generation, big data analytics, data architecture}
 
 \section{Introduction}
 \label{sec:intro}
@@ -263,17 +261,18 @@ problem domain~\cite{SSS+14a}.
 
 In this paper, we present the vision of \textit{BigGIS}, a next generation 
 predictive and prescriptive GIS, that
-leverages big data analytics, semantic reasoning and visual analytics
+leverages big data analytics, semantic web technologies and visual analytics
 methodologies. This approach symbiotically combines system-side computation,
-data storage and semantic reasoning capabilities with human-side perceptive
+data storage and semantic web services capabilities with human-side perceptive
 skills, cognitive reasoning and domain knowledge. We introduce a novel
 \textit{continuous refinement model} to gradually minimize the real-world noise
 and dissolve heterogeneity in data and metadata such that the information gain
 can be maximized. Our contribution lies in
 \begin{inparaenum}[(1)]
-  \item an \textit{integrated analytical pipeline approach} which includes
-  \item \textit{semantically supported reasoning}, 
-  \item \textit{human-related knowledge extraction and generation }as well as
+  \item an \textit{integrated analytical pipeline} which includes
+  \item \textit{semantics}, 
+  \item \textit{domain specific expert knowledge extraction and generation }as
+well as
   \item \textit{modelling uncertainty} to process
   high volume, high velocity and high dimensional spatio-temporal data from
   unreliable and heterogeneous sources.
@@ -301,20 +300,22 @@ open source data. Based on the lambda architecture, this platform enriches
 large volumes of historic data by harvesting real-time data on the fly, e.g.
 social media, or passive and participatory sensors. While this design allows
 for adhoc analysis ability during batch runs, the processing logic has to be
-implemented twice. In a more recent approach, Kreps criticizes the overall
-complexity of the lambda architecture and presents the kappa
+implemented twice. In a more recent approach, Kreps criticizes the
+overall complexity of the lambda architecture and presents the kappa
 architecture~\cite{Kreps2014}, which simplifies the systems' design
 by neglecting the batch layer. To replace batch processing,
 static data is quickly fed through the streaming engine. An
 interesting representative is Plasmap\footnote{\url{https://plasmap.io/}}, a
 high performance geo-processing platform that provides a lightweight,
 interactive query language for high-performance location discovery based on
-OpenStreetMap. Developments in the field of semantic web services show the
-opportunity of  adding  higher  semantic  levels  to existing frameworks,  to
-improve their  usage  and  ease  scalability, allowing for reasoning and
-comprehensive responses~\cite{Tanasescu2006, Frank.2016a, Frank.2016b}.
-Analyses are often performed in a descriptive, predictive or prescriptive 
-way. While the descriptive analysis visualizes the status quo, predictive and 
+OpenStreetMap. In contrast to BigGIS, both PlanetSense and Plasmap do not
+apply reasoning on semantic metadata and domain expert knowledge during
+runtime. However, developments in the field of semantic web services
+show the opportunity of adding  higher  semantic  levels  to existing
+frameworks,  to improve their  usage  and  ease  scalability, allowing for
+reasoning and comprehensive responses~\cite{Tanasescu2006, Frank.2016a,
+Frank.2016b}. Analyses are often performed in a descriptive, predictive or
+prescriptive way. While the descriptive analysis visualizes the status quo, predictive and 
 prescriptive analysis focuses on future-oriented planning. As a result the 
 underlying model and the visualization have to be tightly coupled in order for 
 users to gain knowledge. Users have the possibility to interactively alter a 
@@ -329,8 +330,8 @@ importance for decision making.
 %Andrienko et al. states that geovisual analytics need new approaches to
 %deal with the complexity of data and address a research agenda for
 %working with spatio-temporal data \cite{Andrienko2010}.
-% Plasmap differs from BigGIS in that domain expert knowledge is
-%not used to train the system during runtime.
+% Plasmap differs from BigGIS in that domain expert knowledge is not
+%used to train the system.
 
 \section{B\MakeLowercase{ig}GIS Platform}
 \label{sec:biggis}
@@ -348,9 +349,9 @@ fields \cite{SSK+16a}. We consider uncertainty to be reciprocally related to
 generating new insights and consequently knowledge. Thus, modelling
 uncertainty in BigGIS is a crucial  task. From a high-level perspective,
 our approach consists of an integrated analytics 
-pipeline which blends big data analytics and semantic reasoning on system-side
-with knowledge extraction and generation on human-side, thereby modelling
-uncertainty to continuously refine results as shown in Figure
+pipeline which blends big data analytics and semantic web services
+on system-side with domain specific expert knowledge on human-side, thereby
+modelling uncertainty to continuously refine results as shown in Figure
 \ref{fig:biggisworkflow}.
 %\textcolor{red}{ToDO@all: Clearly define terms of \textit{user}, 
 %\textit{semantics}, \textit{expert knowledge}, see issue \#16}
@@ -358,7 +359,7 @@ uncertainty to continuously refine results as shown in Figure
 
 \begin{figure}
 \centering
-	\includegraphics[width=\linewidth]{figures/biggis-workflow_v4}
+	\includegraphics[width=\linewidth]{figures/biggis-workflow_v5}
 	\caption{Continuous refinement model in BigGIS.}
 	\label{fig:biggisworkflow}
 \end{figure}
@@ -366,40 +367,42 @@ uncertainty to continuously refine results as shown in Figure
 \subsubsection{Integrated Analytics Pipeline}
 The analytics pipeline is the core of the continuous refinement model. A key
 abstraction within this model are specific access points called
-\textit{refinement gates} (see yellow squares in figure
+\textit{refinement gates} (see yellow squares in Figure
 \ref{fig:biggisworkflow}). Refinement gates allow for semantics and external 
 expert knowledge to enter the pipeline at arbitrary stages during analyses to 
-continuously improve data management and analytics results, e.g. to support
+continuously improve data management and analyses results, e.g. to support
 data preparation, to automatically deploy data transformation workflows, to
-provide expert domain knowledge in order to train machine learning models for
-pattern detection or to manipulate visualizations. 
+provide domain specific expert knowledge in order to train machine learning
+models for pattern detection or to manipulate visualizations. 
 
-\subsubsection{Semantically Supported Reasoning}
+\subsubsection{Semantics}
 Locating all available data sources that are relevant for meaningful findings
 in analytical processes is hard to do when it has to be done manually. Semantic
 web technology helps to describe data sources semantically using widely-applied 
 vocabularies. Furthermore, semantic reasoning enables machines to discover 
 suitable sources even if they are described differently, providing a two-level 
-support for users through what we call \textit{linked APIs} and 
-\textit{cognitive apps}. The former abstracts away the users from manually 
+support for users through what we call \textit{Linked APIs} and 
+\textit{Cognitive Apps}. The former abstracts away the users from manually 
 composing data integration workflows to unify heterogeneous data sources by 
 using an appropriate ontology that supports the system (direct semantic 
 support). The latter is a flexible service that is aware of a situational 
 context and capable of sharing this with other services (indirect semantic 
 support).
 
-\subsubsection{Knowledge Extraction and Generation}
+\subsubsection{Domain Specific Expert Knowledge Extraction and Generation}
 The user is another relevant part in the continuous refinement model that is
 either provided with additional expert knowledge by another person or he
 himself is the expert in a specific field of application (direct expert
 knowledge). Overall, we see the continuous refinement process as a knowledge
-transfer from human (expert knowledge) to system which is reinforced by
-semantic reasoning. Thereby, human knowledge is introduced to the system that
-can contain additional domain specific information and constraints. By doing
-so, big data analytics can 
+transfer from human (domain specific expert knowledge) to system which is
+reinforced by smart semantic web services that reason on semantically
+described data. Thereby, human knowledge is introduced to the system that can
+contain additional domain specific information and constraints. By doing so,
+big data analytics can
 \begin{inparaenum}[(1)]
- 	\item leverage the creativity of human analysis to be able to establish
-hidden connections between data and the problem domain and
+ 	\item leverage perceptive skills, cognitive reasoning of human analysis
+to be able to establish hidden connections between data and the problem domain
+and
 	\item continuously refine the analyses quality and results.
 \end{inparaenum}
 The system intelligently learns from the provided external domain knowledge,
@@ -414,21 +417,22 @@ models~\cite{cressie2015statistics}. While this is often obvious in data such
 as volunteered geographic information (VGI) and participatory sensing data,
 this holds true for all available data. The instruments employed by e.g. an
 official meteorological station have inaccuracies. Models derived from data are
-only perfectly applicable for the data upon which they are learned. Expert
-knowledge has some inherent uncertainty. To handle these uncertainties we
-express them as \textit{conditional probabilities}. These conditional
-probabilities allow us to evaluate and model the uncertainty of each data point
-as well as forecast of an analytical model. We apply semantic reasoning on the
-provenance information of data sources in order to infer a level of uncertainty
-that can be considered in the analytical processes. We use \textit{bayesian
-hierarchical models} to be able to cope with the conditional probabilities
-quantified by the semantic reasoning. The idea behind these models is that we
-can model the different parameters by their joint probability distribution.
-Each parameter can be model by hyper-parameters, which are again probability
-distributions. The results models are then probability distributions as well,
-which can then be used in our continuous refinement model. By doing so, we can
-model, examine and present the uncertainty at each stage of the model to enable
-the user of BigGIS to make a well informed decision.
+only perfectly applicable for the data upon which they are learned.
+Domain expert knowledge has some inherent uncertainty. To handle these
+uncertainties we express them as \textit{conditional probabilities}. These
+conditional probabilities allow us to evaluate and model the uncertainty of
+each data point as well as forecast an analytical model. We apply semantic
+reasoning on the provenance information of data sources in order to infer a
+level of uncertainty that can be considered in the analytical processes. We use
+\textit{bayesian hierarchical models} to be able to cope with the conditional
+probabilities quantified by the semantic reasoning. The idea behind this is
+that we can model different parameters by their joint probability
+distribution. Each parameter can be modelled by hyperparameters, which are
+again probability distributions. The resulting models are then probability
+distributions as well, which can then be used in our continuous refinement
+model. By doing so, we can model, examine and present the uncertainty at each
+stage of the process to enable the user of BigGIS to make a well-informed
+decision.
 
 \subsection{Challenges}
 \label{sec:chls}
@@ -537,7 +541,7 @@ rapidly increasing distribution and usage of mobile devices and IoT on the one
 hand and emerging new data sources on the other hand lead to more diverse,
 larger, faster and unreliable data. In this paper, we proposed BigGIS, a next
 generation predictive and prescriptive GIS, that leverages big data analytics,
-semantic reasoning and visual analytics methodologies through a novel
+semantic web services and visual analytics methodologies through a novel
 continuous refinement model, and showed what we consider are the key elements
 to overcome uncertainty and generate meaningful knowledge. Therefore,
 we identified three main challenges for the future. Currently, we are working
@@ -548,12 +552,13 @@ on an integrated prototype to support each of the presented use cases.
 %ACKNOWLEDGMENTS are optional
 \section{Acknowledgements}
 \label{sec:ack}
-This work has been developed in the project BigGIS. BigGIS (reference
-number: 01IS14012) is funded by the German ministry of education and research
-(BMBF) within the research programme ICT 2020.
-%This research has been funded by the Federal Ministry of Education and
-%Research
-%of Germany (subsidy program IKT 2020 -- Forschung f\"ur Innovation).
+%This work has been developed in the project BigGIS. BigGIS (reference
+%number: 01IS14012) is funded by the German ministry of education and research
+%(BMBF) within the research programme ICT 2020.
+The project BigGIS (reference number: 01IS14012) is funded by the Federal
+Ministry of Education and Research (BMBF) within the frame of the research
+programme ``Management and Analysis of Big Data'' in ``ICT 2020 --
+Research for Innovations''.
 
 %
 % The following two commands are all you need in the
