@@ -29,7 +29,7 @@
 
 %Conference
 \conferenceinfo{ACM SigSpatial '16}{Oct 31 - Nov 3, 2016, San
-Francisco, California, USA}
+Francisco Bay Area, California, USA}
 
 %\acmPrice{\$15.00}
 
@@ -41,8 +41,8 @@ Francisco, California, USA}
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data
 %(0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
-\title{BigGIS: A Next Generation Predictive and Prescriptive Geographic
-Information System (Vision Paper)}
+\title{BigGIS: A Continuous Refinement Approach to Master Heterogeneity and
+Uncertainty in Spatio-Temporal Big Data (Vision Paper)}
 %\titlenote{(Produces the permission block, and
 %copyright information). For use with
 %SIG-ALTERNATE.CLS. Supported by ACM.}}
@@ -76,11 +76,27 @@ Information System (Vision Paper)}
 % without further effort on your part as the last section in
 % the body of your article BEFORE References or any Appendices.
 
-\numberofauthors{3} %  in this sample file, there are a *total*
+\numberofauthors{1} %  in this sample file, there are a *total*
 % of EIGHT authors. SIX appear on the 'first-page' (for formatting
 % reasons) and the remaining two appear in the \additionalauthors section.
 %
 \author{
+\alignauthor
+Patrick Wiener\textsuperscript{1}, Julian Bruns\textsuperscript{2}, Daniel
+Seebacher\textsuperscript{3}, Manuel Stein\textsuperscript{3}, Matthias
+Frank\textsuperscript{2}, Viliam Simko\textsuperscript{2}, Jens
+Nimis\textsuperscript{1}\\~\\
+\affaddr{\textsuperscript{1}University of Applied Sciences Karlsruhe,
+Karlsruhe, Germany}\\
+\email{\{patrick.wiener, jens.nimis\}@hs-karlsruhe.de}\\
+\affaddr{\textsuperscript{2}FZI Research Center for Information Technology,
+Karlsruhe, Germany}\\
+\email{\{bruns, frank, simko\}@fzi.de}\\
+\affaddr{\textsuperscript{3}Data Analysis and Visualization Group, University
+of Konstanz, Konstanz, Germany}\\
+\email{\{seebacher, stein\}@dbvis.inf.uni-konstanz.de}
+}
+%\author{
 % You can go ahead and credit any number of authors here,
 % e.g. one 'row of three' or two rows (consisting of one row of three
 % and a second row of one, two or three).
@@ -93,59 +109,57 @@ Information System (Vision Paper)}
 %
 % 1st. author
 %\titlenote{Maybe put address, e-mail here if allowed}
-\alignauthor
-%Patrick Wiener,\\Prof. Dr. Jens Nimis\\
-Firstname Lastname\\
-       \affaddr{University of Applied Sciences Karlsruhe}\\
-%       \affaddr{Moltkestr. 30}\\
-       \affaddr{Karlsruhe, Germany}\\
-       \email{firstname.lastname@hs-karlsruhe.de}
-% 2nd. author
-\alignauthor
-%Julian Bruns,\\Matthias Frank,\\Dr. Viliam Simko\\
-Firstname Lastname\\
-       \affaddr{FZI Research Center for Information Technology}\\
-%       \affaddr{Haid-und-Neu-Str. 10-14}\\
-       \affaddr{Karlsruhe, Germany}\\
-       \email{lastname@fzi.de}
-% 3rd. author
-\alignauthor
-%Manuel Stein,\\Daniel Seebacher\\
-Firstname Lastname\\
-%       \affaddr{Data Analysis and Visualization Group}\\
-       \affaddr{University of Konstanz}\\
-       \affaddr{Konstanz, Germany}\\
-       \email{firstname.lastname@uni-konstanz.de}
+%\alignauthor
+%%Patrick Wiener,\\Prof. Dr. Jens Nimis\\
+%Patrick Wiener\\
+%       \affaddr{University of Applied Sciences Karlsruhe}\\
+%%       \affaddr{Moltkestr. 30}\\
+%       \affaddr{Karlsruhe, Germany}\\
+%       \email{firstname.lastname@hs-karlsruhe.de}
+%% 2nd. author
+%\alignauthor
+%%Julian Bruns,\\Matthias Frank,\\Dr. Viliam Simko\\
+%Julian Bruns\\
+%       \affaddr{FZI Research Center for Information Technology}\\
+%%       \affaddr{Haid-und-Neu-Str. 10-14}\\
+%       \affaddr{Karlsruhe, Germany}\\
+%       \email{lastname@fzi.de}
+%% 3rd. author
+%\alignauthor
+%%Manuel Stein,\\Daniel Seebacher\\
+%Daniel Seebacher\\
+%       \affaddr{University of Konstanz}\\
+%       \affaddr{Konstanz, Germany}\\
+%       \email{firstname.lastname@uni-konstanz.de}
 %\and  % use '\and' if you need 'another row' of author names
 %%% 4th. author
 %\alignauthor
-%Firstname Lastname\\
+%Matthias Frank\\
 %       \affaddr{FZI Research Center for Information Technology}\\
 %%       \affaddr{Haid-und-Neu-Str. 10-14}\\
 %       \affaddr{Karlsruhe, Germany}\\
 %       \email{lastname@fzi.de}
 %%% 5th. author
 %\alignauthor
-%Firstname Lastname\\
+%Manuel Stein\\
 %%       \affaddr{Data Analysis and Visualization Group}\\
 %       \affaddr{University of Konstanz}\\
 %       \affaddr{Konstanz, Germany}\\
 %       \email{firstname.lastname@uni-konstanz.de}
 %%% 6th. author
 %\alignauthor
-%Firstname Lastname\\
-%%       \affaddr{Data Analysis and Visualization Group}\\
-%       \affaddr{University of Konstanz}\\
-%       \affaddr{Konstanz, Germany}\\
-%       \email{firstname.lastname@uni-konstanz.de}
-}
+%Prof. Dr.-Ing. Jens Nimis\\
+%       \affaddr{University of Applied Sciences Karlsruhe}\\
+%%       \affaddr{Moltkestr. 30}\\
+%       \affaddr{Karlsruhe, Germany}\\
+%       \email{firstname.lastname@hs-karlsruhe.de}
+%}
 % There's nothing stopping you putting the seventh, eighth, etc.
 % author on the opening page (as the 'third row') but we ask,
 % for aesthetic reasons that you place these 'additional authors'
 % in the \additional authors block, viz.
-%\additionalauthors{John Smith (FZI,
-%email: {\texttt{jsmith@fzi.de}}), John Smith (Konstanz,
-%email: {\texttt{jsmith@konstanz.de}})}
+%\additionalauthors{Dr. Viliam Simko (FZI Research Center for Information
+%Technology, email: {\texttt{lastname@fzi.de}})}
 %\date{30 July 1999}
 % Just remember to make sure that the TOTAL number of authors
 % is the number that will appear on the first page PLUS the
@@ -179,35 +193,30 @@ GIS.
 % http://dl.acm.org/ccs.cfm
 % Please copy and paste the code instead of the example below. 
 %
-%\begin{CCSXML}
-%<ccs2012>
-% <concept>
-%  <concept_id>10010520.10010553.10010562</concept_id>
-%  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
-%  <concept_significance>500</concept_significance>
-% </concept>
-% <concept>
-%  <concept_id>10010520.10010575.10010755</concept_id>
-%  <concept_desc>Computer systems organization~Redundancy</concept_desc>
-%  <concept_significance>300</concept_significance>
-% </concept>
-% <concept>
-%  <concept_id>10010520.10010553.10010554</concept_id>
-%  <concept_desc>Computer systems organization~Robotics</concept_desc>
-%  <concept_significance>100</concept_significance>
-% </concept>
-% <concept>
-%  <concept_id>10003033.10003083.10003095</concept_id>
-%  <concept_desc>Networks~Network reliability</concept_desc>
-%  <concept_significance>100</concept_significance>
-% </concept>
-%</ccs2012>  
-%\end{CCSXML}
-%
-%\ccsdesc[500]{Computer systems organization~Embedded systems}
-%\ccsdesc[300]{Computer systems organization~Redundancy}
-%\ccsdesc{Computer systems organization~Robotics}
-%\ccsdesc[100]{Networks~Network reliability}
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10002951.10003227.10003236.10003237</concept_id>
+<concept_desc>Information systems~Geographic information systems</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+%<concept>
+%<concept_id>10003120.10003145.10003147.10010365</concept_id>
+%<concept_desc>Human-centered computing~Visual analytics</concept_desc>
+%<concept_significance>500</concept_significance>
+%</concept>
+<concept>
+<concept_id>10011007.10010940.10010971.10010972.10010545</concept_id>
+<concept_desc>Software and its engineering~Data flow
+architectures</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Information systems~Geographic information systems}
+%\ccsdesc[500]{Human-centered computing~Visual analytics}
+\ccsdesc[500]{Software and its engineering~Data flow architectures}
 
 
 %
@@ -217,13 +226,14 @@ GIS.
 %
 %  Use this command to print the description
 %
-%\printccsdesc
+\printccsdesc
 
 % We no longer use \terms command
 %\terms{Theory}
-\category{C.1.3}{Other Architecture Styles}{Data-flow architectures}
-\category{H.1.2}{User/Machine Systems}{Human information processing}
-\category{H.2.8}{Database Applications}{Spatial databases and GIS}
+%\category{C.1.3}{Other Architecture Styles}{Data-flow architectures}
+%\category{H.1.2}{User/Machine Systems}{Human information processing}
+%\category{H.2.8}{Database Applications}{Data mining, Spatial databases and
+%GIS}
 
 \keywords{knowledge generation, big data analytics, data architecture}
 
@@ -260,14 +270,13 @@ perception of human analysis to create hidden connections between data and
 problem domain~\cite{SSS+14a}.
 
 In this paper, we present the vision of \textit{BigGIS}, a next generation 
-predictive and prescriptive GIS, that
-leverages big data analytics, semantic web technologies and visual analytics
-methodologies. This approach symbiotically combines system-side computation,
-data storage and semantic web services capabilities with human-side perceptive
-skills, cognitive reasoning and domain knowledge. We introduce a novel
-\textit{continuous refinement model} to gradually minimize the real-world noise
-and dissolve heterogeneity in data and metadata such that the information gain
-can be maximized. Our contribution lies in
+predictive and prescriptive GIS, that leverages big data analytics, semantics
+and visual analytics methodologies. This approach symbiotically combines
+system-side computation, data storage and semantic web services capabilities
+with human-side perceptive skills, cognitive reasoning and domain knowledge. We
+introduce a novel \textit{continuous refinement model} to gradually minimize
+the real-world noise and dissolve heterogeneity in data and metadata such that
+the information gain can be maximized. Our contribution lies in
 \begin{inparaenum}[(1)]
   \item an \textit{integrated analytical pipeline} which includes
   \item \textit{semantics}, 
@@ -277,7 +286,6 @@ well as
   high volume, high velocity and high dimensional spatio-temporal data from
   unreliable and heterogeneous sources.
 \end{inparaenum}
-
 In Section \ref{sec:related}, we discuss related work. The platform's design is
 introduced in Section \ref{sec:biggis} through the continuous refinement model,
 while major challenges are presented. Use cases are shown in Section
@@ -303,9 +311,9 @@ for adhoc analysis ability during batch runs, the processing logic has to be
 implemented twice. In a more recent approach, Kreps criticizes the
 overall complexity of the lambda architecture and presents the kappa
 architecture~\cite{Kreps2014}, which simplifies the systems' design
-by neglecting the batch layer. To replace batch processing,
-static data is quickly fed through the streaming engine. An
-interesting representative is Plasmap\footnote{\url{https://plasmap.io/}}, a
+by neglecting the batch layer. To replace batch processing, static data is
+quickly fed through the streaming engine. An interesting
+representative is Plasmap\footnote{\url{https://plasmap.io/}}, a
 high performance geo-processing platform that provides a lightweight,
 interactive query language for high-performance location discovery based on
 OpenStreetMap. In contrast to BigGIS, both PlanetSense and Plasmap do not
@@ -315,18 +323,18 @@ show the opportunity of adding  higher  semantic  levels  to existing
 frameworks,  to improve their  usage  and  ease  scalability, allowing for
 reasoning and comprehensive responses~\cite{Tanasescu2006, Frank.2016a,
 Frank.2016b}. Analyses are often performed in a descriptive, predictive or
-prescriptive way. While the descriptive analysis visualizes the status quo, predictive and 
-prescriptive analysis focuses on future-oriented planning. As a result the 
-underlying model and the visualization have to be tightly coupled in order for 
-users to gain knowledge. Users have the possibility to interactively alter a 
-model's parameters according to their knowledge, consequently the visualization
-adjusts to the model in a feedback-loop. Knowledge generation is one important 
-research area where visual analytics is of great use~\cite{Keim2008, Keim2010},
-especially when considering uncertainty of heterogeneous spatio-temporal data
-from various data sources \cite{SSK+16a}. J\"ackle et al. present one possible
-visualization technique \cite{JSBK15} for data and uncertainties of large
-spatial datasets, which is crucial within use cases where both facets are of
-importance for decision making.
+prescriptive way. While the descriptive analysis visualizes the status quo,
+predictive and prescriptive analysis focuses on future-oriented planning. As a
+result the  underlying model and the visualization have to be tightly coupled
+in order for users to gain knowledge. Users have the possibility to
+interactively alter a model's parameters according to their knowledge,
+consequently the visualization adjusts to the model in a feedback-loop.
+Knowledge generation is one important research area where visual analytics is
+of great use~\cite{Keim2008, Keim2010}, especially when considering uncertainty
+of heterogeneous spatio-temporal data from various data sources \cite{SSK+16a}.
+J\"ackle et al. present one possible visualization technique \cite{JSBK15} for
+data and uncertainties of large spatial datasets, which is crucial within use
+cases where both facets are of importance for decision making.
 %Andrienko et al. states that geovisual analytics need new approaches to
 %deal with the complexity of data and address a research agenda for
 %working with spatio-temporal data \cite{Andrienko2010}.
@@ -428,8 +436,8 @@ level of uncertainty that can be considered in the analytical processes. We use
 probabilities quantified by the semantic reasoning. The idea behind this is
 that we can model different parameters by their joint probability
 distribution. Each parameter can be modelled by hyperparameters, which are
-again probability distributions. The resulting models are then probability
-distributions as well, which can then be used in our continuous refinement
+again probability distributions. The resulting models are probability
+distributions as well, which can be used in our continuous refinement
 model. By doing so, we can model, examine and present the uncertainty at each
 stage of the process to enable the user of BigGIS to make a well-informed
 decision.
