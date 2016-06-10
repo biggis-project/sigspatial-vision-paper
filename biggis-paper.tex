@@ -8,6 +8,7 @@
 
 
 \begin{document}
+\sloppy
 % No indent of paragraph
 \parindent 0pt
 
@@ -29,7 +30,7 @@
 
 %Conference
 \conferenceinfo{ACM SigSpatial '16}{Oct 31 - Nov 3, 2016, San
-Francisco Bay Area, California, USA}
+Francisco , California, USA}
 
 %\acmPrice{\$15.00}
 
@@ -82,19 +83,19 @@ Uncertainty in Spatio-Temporal Big Data (Vision Paper)}
 %
 \author{
 \alignauthor
-Patrick Wiener\textsuperscript{1}, Julian Bruns\textsuperscript{2}, Daniel
-Seebacher\textsuperscript{3}, Manuel Stein\textsuperscript{3}, Matthias
-Frank\textsuperscript{2}, Viliam Simko\textsuperscript{2}, Jens
+Patrick Wiener\textsuperscript{1}, Manuel Stein\textsuperscript{2}, Daniel
+Seebacher\textsuperscript{2}, Julian Bruns\textsuperscript{3}, Matthias
+Frank\textsuperscript{3}, Viliam Simko\textsuperscript{3}, Jens
 Nimis\textsuperscript{1}\\~\\
 \affaddr{\textsuperscript{1}University of Applied Sciences Karlsruhe,
 Karlsruhe, Germany}\\
 \email{\{patrick.wiener, jens.nimis\}@hs-karlsruhe.de}\\
+\affaddr{\textsuperscript{2}Data Analysis and Visualization Group, University
+of Konstanz, Konstanz, Germany}\\
+\email{\{stein, seebacher\}@dbvis.inf.uni-konstanz.de}\\
 \affaddr{\textsuperscript{2}FZI Research Center for Information Technology,
 Karlsruhe, Germany}\\
-\email{\{bruns, frank, simko\}@fzi.de}\\
-\affaddr{\textsuperscript{3}Data Analysis and Visualization Group, University
-of Konstanz, Konstanz, Germany}\\
-\email{\{seebacher, stein\}@dbvis.inf.uni-konstanz.de}
+\email{\{bruns, frank, simko\}@fzi.de}
 }
 %\author{
 % You can go ahead and credit any number of authors here,
@@ -167,24 +168,24 @@ of Konstanz, Konstanz, Germany}\\
 
 \maketitle
 \begin{abstract}
-Geographic information systems (GIS) are important tools for decision support
+Geographic information systems (GIS) are important for decision support
 based on spatial data. Due to technical and economical progress an ever
-increasing number of data sources are available leading to rapidly growing fast
-and unreliable amount of data that can be beneficial
+increasing number of data sources are available leading to a rapidly growing
+fast and unreliable amount of data that can be beneficial
 \begin{inparaenum}[(1)]
 \item in the approximation of multivariate and causal predictions of future
 values as well as
-\item in robust and proactive decision making process. 
+\item in robust and proactive decision making processes. 
 \end{inparaenum}
 However, today's GIS are not designed for such big data demands and require new
 methodologies to effectively model uncertainty and generate meaningful
-knowledge. In this work, we introduce \textit{BigGIS}, a predictive and
+knowledge. As a consequence, we introduce \textit{BigGIS}, a predictive and
 prescriptive spatio-temporal analytics platform, that symbiotically
-combines big data analytics, semantics and visual analytics methodologies. 
-We present a novel continuous refinement model and show future challenges as an
-intermediate result of a collaborative research project into big data
-methodologies for spatio-temporal analysis and design for a big data enabled
-GIS.
+combines big data analytics, semantic web technologies and visual analytics
+methodologies. We present a novel continuous refinement model and show future
+challenges as an intermediate result of a collaborative research project into
+big data methodologies for spatio-temporal analysis and design for a big data
+enabled GIS.
 \end{abstract}
 
 
@@ -241,7 +242,7 @@ architectures</concept_desc>
 \label{sec:intro}
 GIS have long been used to support the decision making
 process~\cite{Crossland1995} in many domains like civil planning, environment
-and nature protection or emergency management. Thereby geospatial data have
+and nature protection or emergency management. Thereby, geospatial data have
 always been big data. Petabytes of remotely sensed archival geodata
 (\textit{volume}) and a rapidly increasing amount of real-time sensor data
 streams (\textit{velocity}) accelerate the need for big data analytics in order
@@ -255,32 +256,33 @@ well becoming a feasible approach shaping the design of today's GIS
 (software-level). Although scaling out enables GIS to tackle the aforementioned
 big data induced requirements, there are still two major open issues. Firstly,
 dealing with varying data types across multiple data sources (\textit{variety})
-lead to data and schema heterogeneity, e.g. to describe locations, like
+lead to data and schema heterogeneity, e.g., to describe locations, such as
 addresses, relative spatial relationships or different coordinates reference
 systems~\cite{Frank.2016b}. Secondly, modelling the inherent uncertainties in
-data (\textit{veracity}), e.g. real-world noise and errorneous values due to
+data (\textit{veracity}), e.g., real-world noise and errorneous values due to
 the nature of the data collecting process. Both being crucial tasks in data
 management and analytics that directly affect the information retrieval and
 decision making quality and moreover the generated knowledge on human-side
 (\textit{value}). Current approaches mainly address batch and stream analytics
-in their design oftentimes implemented as a closed unified analytical GIS
-platform~\cite{Thakur2015}. While the importance of such systems to efficiently
-deal with large amount of data is obvious, computers miss the cognition and
-perception of human analysis to create hidden connections between data and
-problem domain~\cite{SSS+14a}.
+in their design that is oftentimes implemented as a closed unified analytical
+system~\cite{Thakur2015}. While the importance of such systems to
+efficiently deal with large amount of data is obvious, computers miss the
+cognition and perception of human analysis to create hidden connections between
+data and problem domain~\cite{SSS+14a}.
 
 In this paper, we present the vision of \textit{BigGIS}, a next generation 
-predictive and prescriptive GIS, that leverages big data analytics, semantics
-and visual analytics methodologies. This approach symbiotically combines
-system-side computation, data storage and semantic web services capabilities
-with human-side perceptive skills, cognitive reasoning and domain knowledge. We
-introduce a novel \textit{continuous refinement model} to gradually minimize
-the real-world noise and dissolve heterogeneity in data and metadata such that
-the information gain can be maximized. Our contribution lies in
+predictive and prescriptive GIS, that leverages big data analytics, semantic
+web technologies and visual analytics methodologies. This approach
+symbiotically combines system-side computation, data storage and semantic web
+services capabilities with human-side perceptive skills, cognitive reasoning
+and domain knowledge. We introduce a novel \textit{continuous refinement model}
+to gradually minimize the real-world noise and dissolve heterogeneity in data
+and metadata such that the information gain can be maximized. Our contribution
+lies in
 \begin{inparaenum}[(1)]
   \item an \textit{integrated analytical pipeline} which includes
-  \item \textit{semantics}, 
-  \item \textit{domain specific expert knowledge extraction and generation }as
+  \item \textit{smart semantic web services}, 
+  \item \textit{domain expert knowledge extraction and generation }as
 well as
   \item \textit{modelling uncertainty} to process
   high volume, high velocity and high dimensional spatio-temporal data from
@@ -290,7 +292,7 @@ In Section \ref{sec:related}, we discuss related work. The platform's design is
 introduced in Section \ref{sec:biggis} through the continuous refinement model,
 while major challenges are presented. Use cases are shown in Section
 \ref{sec:use}. Finally, Section \ref{sec:concl} concludes and addresses future
-research topics.
+work.
 
 \section{Related Work}
 \label{sec:related}
@@ -299,13 +301,13 @@ lead to the evolution of new big data management and analytics architectures
 embracing big data-aware GIS~\cite{Peng2014}. Marz proposes the lambda
 architecture~\cite{Marz2013}, a generic, scalable and fault-tolerant data
 processing system design. By decomposing the problem into three layers, namely
-batch layer, speed layer, and serving layer this architecture
+batch layer, speed layer, and serving layer, this architecture
 hybridly combines batch analytics on historic data and stream analytics on
-high-velocity streaming data to overcome eachs single weakenesses. Thakur et
-al. introduce PlanetSense~\cite{Thakur2015}, a real-time streaming and
+streaming data to overcome eachs single weakenesses. Thakur et al. introduce
+PlanetSense~\cite{Thakur2015}, a real-time streaming and
 spatio-temporal analytics platform for gathering geo-spatial intelligence from
 open source data. Based on the lambda architecture, this platform enriches
-large volumes of historic data by harvesting real-time data on the fly, e.g.
+large volumes of historic data by harvesting real-time data on the fly, e.g.,
 social media, or passive and participatory sensors. While this design allows
 for adhoc analysis ability during batch runs, the processing logic has to be
 implemented twice. In a more recent approach, Kreps criticizes the
@@ -318,7 +320,7 @@ high performance geo-processing platform that provides a lightweight,
 interactive query language for high-performance location discovery based on
 OpenStreetMap. In contrast to BigGIS, both PlanetSense and Plasmap do not
 apply reasoning on semantic metadata and domain expert knowledge during
-runtime. However, developments in the field of semantic web services
+runtime. However, developments in the field of semantic web technologies
 show the opportunity of adding  higher  semantic  levels  to existing
 frameworks,  to improve their  usage  and  ease  scalability, allowing for
 reasoning and comprehensive responses~\cite{Tanasescu2006, Frank.2016a,
@@ -349,25 +351,21 @@ cases where both facets are of importance for decision making.
 In this section, we briefly describe the continuous refinement model in
 BigGIS, which extends the knowledge generation model for visual
 analytics \cite{SSS+14a}. This will on one hand allow to steadily
-improve the analysis results e.g. by updating deployed machine learning models,
-and on the other hand to build the user's trust in these results by creating
-awareness of underlying uncertainties and data provenance which is key for
-providing meaningful predictive and prescriptive decision support in various
-fields \cite{SSK+16a}. We consider uncertainty to be reciprocally related to
-generating new insights and consequently knowledge. Thus, modelling
-uncertainty in BigGIS is a crucial  task. From a high-level perspective,
-our approach consists of an integrated analytics 
-pipeline which blends big data analytics and semantic web services
-on system-side with domain specific expert knowledge on human-side, thereby
-modelling uncertainty to continuously refine results as shown in Figure
-\ref{fig:biggisworkflow}.
-%\textcolor{red}{ToDO@all: Clearly define terms of \textit{user}, 
-%\textit{semantics}, \textit{expert knowledge}, see issue \#16}
-
+improve the analysis results, e.g., by updating deployed machine learning
+models, and on the other hand to build the user's trust in these results by
+creating awareness of underlying uncertainties and data provenance which is key
+for providing meaningful predictive and prescriptive decision support in
+various fields \cite{SSK+16a}. We consider uncertainty to be reciprocally
+related to generating new insights and consequently knowledge. Thus, modelling
+uncertainty is a crucial task in BigGIS. From a high-level perspective, our
+approach consists of an integrated analytics pipeline which blends big data
+analytics and semantic web services on system-side with domain expert
+knowledge on human-side, thereby modelling uncertainty to continuously refine
+results to generate new knowledge as shown in Figure \ref{fig:biggisworkflow}.
 
 \begin{figure}
 \centering
-	\includegraphics[width=\linewidth]{figures/biggis-workflow_v5}
+	\includegraphics[width=\linewidth]{figures/biggis-workflow_v6}
 	\caption{Continuous refinement model in BigGIS.}
 	\label{fig:biggisworkflow}
 \end{figure}
@@ -376,37 +374,37 @@ modelling uncertainty to continuously refine results as shown in Figure
 The analytics pipeline is the core of the continuous refinement model. A key
 abstraction within this model are specific access points called
 \textit{refinement gates} (see yellow squares in Figure
-\ref{fig:biggisworkflow}). Refinement gates allow for semantics and external 
-expert knowledge to enter the pipeline at arbitrary stages during analyses to 
-continuously improve data management and analyses results, e.g. to support
-data preparation, to automatically deploy data transformation workflows, to
-provide domain specific expert knowledge in order to train machine learning
-models for pattern detection or to manipulate visualizations. 
+\ref{fig:biggisworkflow}). Refinement gates allow for smart semantic web
+services, external domain expert knowledge and user interaction to enter the
+pipeline at arbitrary stages during analyses to continuously improve
+data management and analyses results, e.g., to support data preparation, to
+automatically deploy data transformation workflows, to provide domain expert
+knowledge in order to train machine learning models for pattern detection or to
+manipulate visualizations. 
 
-\subsubsection{Semantics}
+\subsubsection{Smart Semantic Web Services}
 Locating all available data sources that are relevant for meaningful findings
 in analytical processes is hard to do when it has to be done manually. Semantic
-web technology helps to describe data sources semantically using widely-applied 
+web technologies help to describe data sources using widely-applied 
 vocabularies. Furthermore, semantic reasoning enables machines to discover 
 suitable sources even if they are described differently, providing a two-level 
 support for users through what we call \textit{Linked APIs} and 
-\textit{Cognitive Apps}. The former abstracts away the users from manually 
+\textit{Cognitive Apps}. The former abstracts away the user from manually 
 composing data integration workflows to unify heterogeneous data sources by 
 using an appropriate ontology that supports the system (direct semantic 
 support). The latter is a flexible service that is aware of a situational 
 context and capable of sharing this with other services (indirect semantic 
 support).
 
-\subsubsection{Domain Specific Expert Knowledge Extraction and Generation}
-The user is another relevant part in the continuous refinement model that is
-either provided with additional expert knowledge by another person or he
+\subsubsection{Domain Expert Knowledge Extraction and Generation}
+The user is another relevant part in the continuous refinement model who is
+either provided with additional domain expert knowledge by another person or he
 himself is the expert in a specific field of application (direct expert
 knowledge). Overall, we see the continuous refinement process as a knowledge
-transfer from human (domain specific expert knowledge) to system which is
-reinforced by smart semantic web services that reason on semantically
-described data. Thereby, human knowledge is introduced to the system that can
-contain additional domain specific information and constraints. By doing so,
-big data analytics can
+transfer from human to system which is reinforced by smart semantic web
+services that reason on semantically described data. Thereby, human knowledge
+is introduced to the system that can contain additional domain specific
+information and constraints. By doing so, big data analytics can
 \begin{inparaenum}[(1)]
  	\item leverage perceptive skills, cognitive reasoning of human analysis
 to be able to establish hidden connections between data and the problem domain
@@ -414,8 +412,8 @@ and
 	\item continuously refine the analyses quality and results.
 \end{inparaenum}
 The system intelligently learns from the provided external domain knowledge,
-such that it can reuse it in the future (indirect expert support). Thus,
-leading to an increasing likelihood of relevant findings by users during the
+such that it can reuse it for future tasks (indirect expert support). Thus,
+leading to an increasing likelihood of relevant findings by a user during the
 course of exploration and eventually to generating new knowledge.
 
 
@@ -423,24 +421,24 @@ course of exploration and eventually to generating new knowledge.
 Uncertainty is inherent in data as well as in
 models~\cite{cressie2015statistics}. While this is often obvious in data such
 as volunteered geographic information (VGI) and participatory sensing data,
-this holds true for all available data. The instruments employed by e.g. an
-official meteorological station have inaccuracies. Models derived from data are
-only perfectly applicable for the data upon which they are learned.
-Domain expert knowledge has some inherent uncertainty. To handle these
-uncertainties we express them as \textit{conditional probabilities}. These
-conditional probabilities allow us to evaluate and model the uncertainty of
-each data point as well as forecast an analytical model. We apply semantic
-reasoning on the provenance information of data sources in order to infer a
-level of uncertainty that can be considered in the analytical processes. We use
-\textit{bayesian hierarchical models} to be able to cope with the conditional
+this holds true for all available data. The instruments employed by, e.g., an
+official meteorological station, have inaccuracies. Models derived from data
+are only perfectly applicable for the data upon which they are learned.
+Thereby, domain expert knowledge has some inherent uncertainty as well. To
+handle these uncertainties we express them as \textit{conditional
+probabilities}. These conditional probabilities allow us to evaluate and model
+the uncertainty of each data point as well as forecast an analytical model. We
+apply semantic reasoning on the provenance information of data sources in order
+to infer a level of uncertainty that can be considered in the analytical
+processes. We use \textit{bayesian hierarchical
+models}~\cite{cressie2015statistics} to be able to cope with the conditional
 probabilities quantified by the semantic reasoning. The idea behind this is
-that we can model different parameters by their joint probability
-distribution. Each parameter can be modelled by hyperparameters, which are
-again probability distributions. The resulting models are probability
-distributions as well, which can be used in our continuous refinement
-model. By doing so, we can model, examine and present the uncertainty at each
-stage of the process to enable the user of BigGIS to make a well-informed
-decision.
+that we can model different parameters by their joint probability distribution.
+Each parameter can be modelled by hyperparameters, which are again probability
+distributions. The resulting models are probability distributions as well,
+which can be used in our continuous refinement model. By doing so, we can
+model, examine and present the uncertainty at each stage of the process to
+enable the user of BigGIS to make a well-informed decision.
 
 \subsection{Challenges}
 \label{sec:chls}
@@ -465,8 +463,7 @@ address this challenge by a smart data integration approach which is based on
 semantically described data sources and data transformation services as
 discussed in~\cite{Frank.2016a}. Smart web services dynamically compose
 workflows of data sources and data transformation services adopted to the
-requirements of different GISs based on the semantic meta
-data~\cite{Frank.2016b}. 
+requirements of different GISs based on the semantic metadata~\cite{Frank.2016b}. 
 
 \subsubsection{Dimensionality reduction}
 The continuous refinement model employed in BigGIS is
@@ -474,7 +471,7 @@ dependent on a fast computation of possible data sources. The used data are
 high-dimensional and models built upon this data can easily fall to the curse
 of dimensionality. Also, while the presented architecture can handle the
 challenges of big data, it is not always possible to transfer all the raw data
-to our pipeline. In case of an automated sensor, e.g. on an unmanned aerial
+to our pipeline. In case of an automated sensor, e.g., on an unmanned aerial
 vehicle, the transfer rate is dependent on the available bandwidth.
 BigGIS aims to deal with the challenge of dimensionality reduction for
 spatio-temporal data, balancing between the robustness of a model and the
@@ -482,21 +479,21 @@ adaptability to training and input data.
 
 \subsubsection{Bias-variance trade-off}
 The bias-variance trade-off~\cite{Hastie2009} is of particular
-interest in BigGIS, as the continuous refinement model as well as
-the modelling of uncertainty are inherently connected to this.
-Generally, solving this trade-off optimally is highly depending on the
-specific use case. Providing the user with sufficient information to reason and
-generate knowledge under these restrictions is one problem which we hope to
-present a solution for. Here, the challenge lies in the speed of computation,
-the different level of expertise for each user and the available bandwidth to
-transfer information back to the user and/or analytical pipeline.
+interest in BigGIS, as the modelling of uncertainty in the continuous
+refinement model is inherently connected to this. Generally, solving this
+trade-off optimally is highly depending on the specific use case. Providing the
+user with sufficient information to reason and generate knowledge under these
+restrictions is one problem which we hope to present a solution for. Here, the
+challenge lies in the speed of computation, the different level of expertise
+for each user and the available bandwidth to transfer information back to the
+user and the analytics pipeline.
 
 \section{Use Cases}
 \label{sec:use}
 %\textcolor{red}{ToDO@all: please review and comment}
 BigGIS will support decision making in multiple use cases that require
 processing of large and heterogeneous spatio-temporal data from unreliable
-sources. The prototype will be evaluated on three scenarios: 
+sources. The prototype will be evaluated on three use cases: 
 \begin{inparaenum}[(1)]
 	\item smart city and health, i.e. heat stress in urban areas,
 	\item environmental management, i.e. spread of invasive species,
@@ -521,39 +518,41 @@ address varying big data related requirements.
 %(predictive), which lastly results in suggestions to perform certain 
 %counteractive measures (prescriptive).
 %%this is just an alternative scenario; speech has to be updated.
-In brief, an illustrating use case is supporting rescue forces in assessing
-and managing large-scale and complex chemical disasters. Providing
-an in-depth overview of the current situation within a small time frame
-(velocity) is crucial to prevent exposing the surrounding population to any
-hazardous substances. Recent developments in the field of
-mobile robotics allow using in-situ components such as autonomously flying
-unmanned aerial vehicles equipped with a hyper spectral camera that produces
-several gigabyte of raw data per mission (volume). In addition, differing
-sources (variety), e.g. weather stations, VGI or participatory sensing data,
-can be integrated in BigGIS, though arriving with high uncertainty (veracity).
-The combination of those datasets with various other semantically described
-data sources, helps conducting spatio-temporal statistics. Furthermore, the
-experts domain knowledge is used to train classifiers in order to automatically
+In brief, an illustrating scenario in the aforementioned emergency management
+use case is supporting rescue forces in assessing and managing large-scale and
+complex chemical disasters. Providing an in-depth overview of the current
+situation within a small time frame (velocity) is crucial to prevent exposing
+the surrounding population to any hazardous substances. Recent developments in
+the field of mobile robotics allow using in-situ components such as
+autonomously flying unmanned aerial vehicles equipped with hyper spectral
+cameras to scan the affected area for hazardous gases producing several
+gigabytes of raw data per mission (volume). In addition, differing sources
+(variety), e.g., weather stations, VGI or participatory sensing data, can be
+integrated in BigGIS, though arriving with high uncertainty (veracity). The
+combination of those datasets with various other semantically described data
+sources, helps conducting spatio-temporal statistics. Furthermore, the experts
+domain knowledge is used to train classifiers in order to automatically
 classify the hazardous content and identify contaminated areas. Conditional
 probabilities are computed to forecast the dispersion of the hazardous smoke
-and visualized in risk-maps to highlight potentially endangered areas. Not only
+and visualized in risk maps to highlight potentially endangered areas. Not only
 are the rescue forces informed about the current situation (descriptive), but
-also about risk potential of surrounding areas (predictive), which can be used
-to automatically alert further public authorities and organizations that
-perform security tasks in these areas (prescriptive).
+also about the risk potential of surrounding areas (predictive), which can be
+used to automatically alert further public authorities and organizations that
+would be enabled to perform specifically targeted measures (prescriptive).
 
 \section{Conclusions and Future Work}
 \label{sec:concl}
 Big geo data will continually grow during the next years. The
-rapidly increasing distribution and usage of mobile devices and IoT on the one
-hand and emerging new data sources on the other hand lead to more diverse,
-larger, faster and unreliable data. In this paper, we proposed BigGIS, a next
+rapidly increasing distribution and usage of mobile devices and Internet of
+Things as well as the emergence of new data sources lead to more diverse,
+larger and unreliable data. In this paper, we proposed BigGIS, a next
 generation predictive and prescriptive GIS, that leverages big data analytics,
-semantic web services and visual analytics methodologies through a novel
-continuous refinement model, and showed what we consider are the key elements
-to overcome uncertainty and generate meaningful knowledge. Therefore,
-we identified three main challenges for the future. Currently, we are working
-on an integrated prototype to support each of the presented use cases.
+semantic web technologies and visual analytics methodologies through a novel
+continuous refinement model. We showed what we consider are the key elements to
+master heterogeneity and uncertainty in spatio-temporal big data to generate
+meaningful knowledge and identified three main challenges.
+Currently, we are working on an integrated prototype to support each of
+the presented use cases.
 
 %\end{document}  % This is where a 'short' article might terminate
 
