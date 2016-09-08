@@ -6,7 +6,7 @@
 
 \usepackage[utf8]{inputenc} 
 \usepackage[T1]{fontenc}
-%\usepackage{microtype}
+\usepackage{microtype}
 
 \newcommand{\quadrat}{\ding{110}}%
 
@@ -225,7 +225,7 @@ enabled GIS.
 \end{CCSXML}
 
 \ccsdesc[500]{Information systems~Geographic information systems}
-\ccsdesc[500]{Information systems~Computing platforms}
+%\ccsdesc[500]{Information systems~Computing platforms}
 \ccsdesc[500]{Human-centered computing~Visual analytics}
 \ccsdesc[500]{Software and its engineering~Semantics}
 
@@ -259,15 +259,15 @@ streams (\textit{velocity}) accelerate the need for big data analytics in order
 to effectively model and efficiently process complex geo-temporal problems. In
 the past, limited access to computing power has been a
 bottleneck~\cite{OGC2013}. However, in the era of cloud computing,
-leveraging cloud-based resources is a widely adopted pattern (hardware level).
+leveraging cloud-based resources is a widely adopted pattern.
 In addition, with the advent of big data analytics, performing massively
 parallel analytical tasks on large-scale data at rest or data in motion is as
-well becoming a feasible approach shaping the design of today's GIS
-(software-level). Although scaling out enables GIS to tackle the aforementioned
-big data induced requirements, there are still two major open issues. Firstly,
-dealing with varying data types across multiple data sources (\textit{variety})
-lead to data and schema heterogeneity, e.g., to describe locations such as
-addresses, relative spatial relationships or different coordinates reference
+well becoming a feasible approach shaping the design of today's GIS. Although
+scaling out enables GIS to tackle the aforementioned big data induced
+requirements, there are still two major open issues. Firstly, dealing with
+varying data types across multiple data sources (\textit{variety}) lead to data
+and schema heterogeneity, e.g., to describe locations such as addresses,
+relative spatial relationships or different coordinates reference
 systems~\cite{Frank.2016b}. Secondly, modelling the inherent uncertainties in
 data (\textit{veracity}), e.g., real-world noise and errorneous values due to
 the nature of the data collecting process. Both being crucial tasks in data
@@ -332,8 +332,9 @@ BigGIS, both PlanetSense and Plasmap do not apply reasoning on semantic
 metadata and domain expert knowledge during runtime. However, developments in
 the field of \textit{semantic web technologies} show the opportunity of adding 
 higher semantic  levels  to existing frameworks in order to improve their 
-usage and ease scalability, allowing for reasoning and comprehensive
-responses~\cite{Tanasescu2006, Frank.2016a, Frank.2016b}. Analyses are often
+usage in terms of integrating spatio-temporal big data and ease scalability,
+allowing for reasoning and comprehensive responses~\cite{Tanasescu2006,
+Frank.2016a, Frank.2016b}. Analyses are often
 performed in a descriptive, predictive or prescriptive way. While the
 descriptive analysis visualizes the status quo, predictive and prescriptive
 analysis focuses on future-oriented planning. As a result, the underlying model
@@ -347,7 +348,7 @@ from various data sources \cite{SSK+16a}. J\"ackle et al. present one possible
 visualization technique \cite{JSBK15} for data and uncertainties of large
 spatial datasets, which is crucial within use cases where both facets are of
 importance for decision-making.
-%Andrienko et al. states that geovisual analytics need new approaches to
+%Andrienko et al. state that geovisual analytics need new approaches to
 %deal with the complexity of data and address a research agenda for
 %working with spatio-temporal data \cite{Andrienko2010}.
 % Plasmap differs from BigGIS in that domain expert knowledge is not
@@ -399,11 +400,12 @@ web technologies help to describe data sources using standard vocabularies.
 Furthermore, reasoning on the logical entailments helps in discovering suitable
 sources even if they are described differently, providing a two-level support
 for users through what we call \textit{Linked APIs} and \textit{Cognitive
-Apps}. The former abstracts away the user from manually composing data
-integration workflows to unify heterogeneous data sources by using an
-appropriate ontology that supports the system (direct semantic support). The
-latter is a flexible service that is aware of a situational context and capable
-of sharing it with other services (indirect semantic support).
+Apps}. The former abstracts away the user from manually performing data
+integration steps to unify heterogeneous data sources by building on
+appropriate ontologies~\cite{Frank.2016b} that support the system (direct
+semantic support). The latter is a flexible service that is aware of a
+situational context and capable of sharing it with other services (indirect
+semantic support).
 
 \subsubsection{Domain Expert Knowledge Extraction and Generation}
 The user is another relevant part in the continuous refinement model who is
@@ -465,14 +467,14 @@ In addition, dealing with data and schema heterogeneity and
 inherent uncertainty is another relevant field of research that BigGIS
 addresses. Preconditions for meaningful findings in GIS are accurate,
 consistent and complete data as input for analytical processes. However,
-sources of spatio-temporal data are distributed and quality of the data is
+more spatio-temporal data sources evolve and quality of the data is
 varying, especially when considering uncertain data such as VGI. We intend to
 address this challenge by a smart data integration approach which is based on
-semantically described data sources and data transformation services as
-discussed in~\cite{Frank.2016a}. Smart web services dynamically compose
-workflows of data sources and data transformation services adopted to the
-requirements of different GISs based on the semantic
-metadata~\cite{Frank.2016b}.
+semantically described data sources extending existing ontologies and data
+transformation services according to the requirements of different GISs as
+discussed in~\cite{Frank.2016a, Frank.2016b}. Thereby, the selection of
+appropriate ontologies that provide good extensibility to integrate new data
+sources is a crucial task for this approach to be applicable.
 
 \subsubsection{Dimensionality reduction}
 The continuous refinement model employed in BigGIS is
