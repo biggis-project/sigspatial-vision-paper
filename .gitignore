@@ -2,5 +2,7 @@
 *.bbl
 *.blg
 *.log
+*.dvi
+./textpadtmp
 /biggis-paper.pdf
 *.synctex.gz
