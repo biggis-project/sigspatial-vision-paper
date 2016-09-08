@@ -434,13 +434,15 @@ models~\cite{cressie2015statistics}. While this is often obvious in data such
 as volunteered geographic information (VGI) and participatory sensing data,
 this holds true for all available data. Models derived from data
 are only perfectly applicable for the data upon which they are learned.
-Thereby, domain expert knowledge has some inherent uncertainty as well. To
-handle these uncertainties, we express them as \textit{conditional
-probabilities}. These conditional probabilities allow us to evaluate and model
-the uncertainty of each data point as well as forecast an analytical model. We
-apply semantic reasoning on the provenance information of data sources in order
-to infer a level of uncertainty that can be considered in the analytical
-processes. We use \textit{bayesian hierarchical
+Additionally, domain expert knowledge has some inherent uncertainty as well.
+Thus, uncertainty constitutes an impediment for refinement. Transparently
+showing uncertainty would mitigate problems in the first place and would help
+the user to build up trust. To handle these uncertainties, we express them as
+\textit{conditional probabilities}. These conditional probabilities allow us to
+evaluate and model the uncertainty of each data point as well as forecast an
+analytical model. We apply semantic reasoning on the provenance information of
+data sources in order to infer a level of uncertainty that can be considered in
+the analytical processes. We use \textit{bayesian hierarchical
 models}~\cite{cressie2015statistics} to be able to cope with the conditional
 probabilities quantified by the semantic reasoning. The idea behind this is
 that we can model different parameters by their joint probability distribution.
