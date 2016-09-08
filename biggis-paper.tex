@@ -454,44 +454,46 @@ enable the user of BigGIS to make a well-informed decision.
 
 \subsection{Challenges}
 \label{sec:chls}
+Data volume and velocity are well-managed requirements through highly
+scalable cloud-based big data architectures~\cite{Marz2013, Kreps2014}.
+Yet, there are still additional big data dimensions, namely variety and
+veracity, that need to be dealt with in order to generate valueable knowledge.
 We identify three major challenges.
 
 \subsubsection{Varying big data related requirements}
-Data volume and velocity are well-managed requirements through highly
-scalable cloud-based big data architectures such as lambda architecture or
-kappa architecture. Still, the field of application specifies the degrees of
-big data related requirements. Thus, to provide a unified platform, efficiently
-managing the complex backend ecosystem for varying requirements is a
-non-trivial task. We approach this challenge by leveraging Apache
-Mesos\footnote{\url{http://mesos.apache.org/}} in combination with
-container technologies such as Docker \footnote{\url{https://www.docker.com/}}.
-In addition, dealing with data and schema heterogeneity and
-inherent uncertainty is another relevant field of research that BigGIS
-addresses. Preconditions for meaningful findings in GIS are accurate,
-consistent and complete data as input for analytical processes. However,
-more spatio-temporal data sources evolve and quality of the data is
-varying, especially when considering uncertain data such as VGI. We intend to
-address this challenge by a smart data integration approach which is based on
-semantically described data sources extending existing ontologies and data
-transformation services according to the requirements of different analytical
-goals as discussed in~\cite{Frank.2016a, Frank.2016b}. Thereby, the selection
-of appropriate ontologies that can easily be extended to integrate new data
-sources is a crucial task for the direct and indirect semantic support to be
-applicable.
+The field of application specifies the degrees of big data related
+requirements. Thus, to provide a unified platform, efficiently managing
+the complex backend ecosystem for varying requirements is a non-trivial task.
+We approach this challenge by leveraging Apache
+Mesos\footnote{\url{http://mesos.apache.org/}} in combination with container
+technologies such as Docker \footnote{\url{https://www.docker.com/}}. In
+addition, dealing with data and schema heterogeneity and inherent uncertainty
+is another relevant field of research that BigGIS addresses. Preconditions for
+meaningful findings in GIS are accurate, consistent and complete data as input
+for analytical processes. However, more spatio-temporal data sources evolve and
+quality of the data is varying, especially when considering uncertain data such
+as VGI. We intend to address this challenge by a smart data integration
+approach which is based on semantically described data sources extending
+existing ontologies and data transformation services according to the
+requirements of different analytical goals as discussed in~\cite{Frank.2016a,
+Frank.2016b}. Thereby, the selection of appropriate ontologies that can easily
+be extended to integrate new data sources is a crucial task for our approach to
+be applicable.
 
 \subsubsection{Dimensionality reduction}
 The continuous refinement model employed in BigGIS aims towards (near)
 real-time processing of data to minimize the time to insight on human-side (see
 action-finding loop in Figure \ref{fig:biggisworkflow}). However, today's newly
-arising spatio-temporal data, e.g., from airborne hyperspectral imaging
-systems, are high-dimensional and models built upon this data can easily fall
-to the curse of dimensionality due to the given processing time limitations.
-Also, while the presented architecture can handle the challenges of big data,
-it is not always possible to transfer all the raw data to our pipeline. In case
-of an automated sensor, e.g., on an unmanned aerial vehicle, the transfer rate
-is dependent on the available bandwidth. BigGIS aims to deal with the challenge
-of dimensionality reduction for spatio-temporal data, balancing between the
-robustness of a model and the adaptability to training and input data. 
+arising spatio-temporal data, e.g., airborne hyperspectral images, are
+high-dimensional and models built upon this data can easily fall
+to the curse of dimensionality due to the given processing (near) real-time
+constraint. Also, while the presented architecture can handle the challenges
+of big data, it is not always possible to transfer all the raw data to our
+pipeline. In case of an automated sensor, e.g., on an unmanned aerial vehicle,
+the transfer rate is dependent on the available bandwidth. BigGIS aims to deal
+with the challenge of dimensionality reduction for spatio-temporal data,
+balancing between the robustness of a model and the adaptability to training
+and input data. 
 
 \subsubsection{Bias-variance trade-off}
 The bias-variance trade-off~\cite{Hastie2009} is of particular
