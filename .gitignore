@@ -3,6 +3,7 @@
 *.blg
 *.log
 *.dvi
-./textpadtmp
+*.ps
+.textpadtmp/
 /biggis-paper.pdf
 *.synctex.gz
