@@ -474,19 +474,22 @@ semantically described data sources extending existing ontologies and data
 transformation services according to the requirements of different analytical
 goals as discussed in~\cite{Frank.2016a, Frank.2016b}. Thereby, the selection
 of appropriate ontologies that can easily be extended to integrate new data
-sources is a crucial task for this approach to be applicable.
+sources is a crucial task for the direct and indirect semantic support to be
+applicable.
 
 \subsubsection{Dimensionality reduction}
-The continuous refinement model employed in BigGIS is
-dependent on a fast computation of possible data sources. The used data are
-high-dimensional and models built upon this data can easily fall to the curse
-of dimensionality. Also, while the presented architecture can handle the
-challenges of big data, it is not always possible to transfer all the raw data
-to our pipeline. In case of an automated sensor, e.g., on an unmanned aerial
-vehicle, the transfer rate is dependent on the available bandwidth.
-BigGIS aims to deal with the challenge of dimensionality reduction for
-spatio-temporal data, balancing between the robustness of a model and the
-adaptability to training and input data. 
+The continuous refinement model employed in BigGIS aims towards (near)
+real-time processing of data to minimize the time to insight on human-side (see
+action-finding loop in Figure \ref{fig:biggisworkflow}). However, today's newly
+arising spatio-temporal data, e.g., from airborne hyperspectral imaging
+systems, are high-dimensional and models built upon this data can easily fall
+to the curse of dimensionality due to the given processing time limitations.
+Also, while the presented architecture can handle the challenges of big data,
+it is not always possible to transfer all the raw data to our pipeline. In case
+of an automated sensor, e.g., on an unmanned aerial vehicle, the transfer rate
+is dependent on the available bandwidth. BigGIS aims to deal with the challenge
+of dimensionality reduction for spatio-temporal data, balancing between the
+robustness of a model and the adaptability to training and input data. 
 
 \subsubsection{Bias-variance trade-off}
 The bias-variance trade-off~\cite{Hastie2009} is of particular
@@ -534,7 +537,7 @@ complex chemical disasters. Providing an in-depth overview of the current
 situation within a small time frame (velocity) is crucial to prevent exposing
 the surrounding population to any hazardous substances. Recent developments in
 the field of mobile robotics allow using in-situ components such as
-autonomously flying unmanned aerial vehicles equipped with hyper spectral
+autonomously flying unmanned aerial vehicles equipped with hyperspectral
 cameras to scan the affected area for hazardous gases producing several
 gigabytes of raw data per mission (volume). In addition, differing sources
 (variety), e.g., weather stations, VGI or participatory sensing data, can be
