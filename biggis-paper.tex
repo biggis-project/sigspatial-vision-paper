@@ -384,14 +384,14 @@ results to generate new knowledge as shown in Figure \ref{fig:biggisworkflow}.
 \subsubsection{Integrated Analytics Pipeline}
 The analytics pipeline is the core of the continuous refinement model. A key
 abstraction within this model are specific access points called
-\textit{refinement gates} (see yellow squares in Figure
-\ref{fig:biggisworkflow}). Refinement gates allow for smart semantic web
-services, external domain expert knowledge and user interaction to enter the
-pipeline at arbitrary stages during analyses to continuously improve
-data management and analyses results, e.g., to support data preparation, to
-automatically deploy data transformation workflows, to provide domain expert
-knowledge in order to train machine learning models for pattern detection or to
-manipulate visualizations. 
+\textit{refinement gates} that are expressed by a topic-based publish-subscribe
+messaging system (see yellow squares in Figure \ref{fig:biggisworkflow}).
+Refinement gates allow for smart semantic web services, external domain expert
+knowledge and user interaction to enter the pipeline at arbitrary stages during
+analyses to continuously improve data management and analyses results, e.g., to
+support data preparation, to automatically deploy data transformation
+workflows, to provide domain expert knowledge in order to train machine
+learning models for pattern detection or to manipulate visualizations. 
 
 \subsubsection{Smart Semantic Web Services}
 Locating all available data sources that are relevant for meaningful findings
