@@ -458,7 +458,7 @@ Data volume and velocity are well-managed requirements through highly
 scalable cloud-based big data architectures~\cite{Marz2013, Kreps2014}.
 Yet, there are still additional big data dimensions, namely variety and
 veracity, that need to be dealt with in order to generate valueable knowledge.
-We identify three major challenges.
+Based on this, we identify three major challenges.
 
 \subsubsection{Varying big data related requirements}
 The field of application specifies the degrees of big data related
@@ -475,25 +475,20 @@ quality of the data is varying, especially when considering uncertain data such
 as VGI. We intend to address this challenge by a smart data integration
 approach which is based on semantically described data sources extending
 existing ontologies and data transformation services according to the
-requirements of different analytical goals as discussed in~\cite{Frank.2016a,
-Frank.2016b}. Thereby, the selection of appropriate ontologies that can easily
-be extended to integrate new data sources is a crucial task for our approach to
-be applicable.
+requirements of different analytical goals~\cite{Frank.2016a, Frank.2016b}.3
 
 \subsubsection{Dimensionality reduction}
-The continuous refinement model employed in BigGIS aims towards (near)
-real-time processing of data to minimize the time to insight on human-side (see
-action-finding loop in Figure \ref{fig:biggisworkflow}). However, today's newly
-arising spatio-temporal data, e.g., airborne hyperspectral images, are
-high-dimensional and models built upon this data can easily fall
-to the curse of dimensionality due to the given processing (near) real-time
-constraint. Also, while the presented architecture can handle the challenges
-of big data, it is not always possible to transfer all the raw data to our
-pipeline. In case of an automated sensor, e.g., on an unmanned aerial vehicle,
-the transfer rate is dependent on the available bandwidth. BigGIS aims to deal
-with the challenge of dimensionality reduction for spatio-temporal data,
-balancing between the robustness of a model and the adaptability to training
-and input data. 
+The continuous refinement model employed in BigGIS aims to provide real-time
+processing of data to minimize the time to deliver insights to the user.
+Spatio-temporal data, e.g., airborne hyperspectral images, are high-dimensional
+and models built upon this data have to deal with the curse of dimensionality
+due to the given real-time constraint. Also, while the presented architecture
+can handle the challenges of big data, it is not always possible to transfer
+all the raw data to our pipeline. In the example case of a sensor on an
+unmanned aerial vehicle, the transfer rate depends on the available bandwidth.
+BigGIS aims to deal with the challenge of dimensionality reduction for
+spatio-temporal data, balancing between the robustness of a model and the
+adaptability to training and input data. 
 
 \subsubsection{Bias-variance trade-off}
 The bias-variance trade-off~\cite{Hastie2009} is of particular
@@ -501,9 +496,10 @@ interest in BigGIS, as the modelling of uncertainty in the continuous
 refinement model is inherently connected to this. Generally, solving this
 trade-off optimally is highly depending on the specific use case. Providing the
 user with sufficient information to reason and generate knowledge under these
-restrictions is one demanding problem. Here, the challenge lies in the speed of
-computation, the different level of expertise for each user and the available
-bandwidth to transfer information back to the user and the analytics pipeline.
+restrictions is one demanding problem. Here, the challenge lies in the speed
+of computation, the different level of expertise for each user and the
+available bandwidth to transfer information back to the user and the analytics
+pipeline.
 
 \section{Use Cases}
 \label{sec:use}
